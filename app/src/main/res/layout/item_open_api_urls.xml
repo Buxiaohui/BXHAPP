@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/index"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="40dp"
+        android:background="@drawable/common_round_bg"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        tools:text="101"
+        android:text="101"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@id/index"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="这里放置url"></TextView>
+
+        <View
+            android:id="@+id/inner_dovider"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="这里放置url"></TextView>
+    </LinearLayout>
+
+</RelativeLayout>

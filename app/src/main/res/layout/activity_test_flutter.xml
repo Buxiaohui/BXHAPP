@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/btn_0"
+        android:text="click me show flutter view -1- !!!"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:id="@+id/btn_1"
+        android:text="click me show flutter view -2- !!!"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:id="@+id/btn_2"
+        android:text="flutter fragment"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:layout_height="wrap_content"></TextView>
+    <FrameLayout
+        android:id="@+id/flutter_fragment_container"
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

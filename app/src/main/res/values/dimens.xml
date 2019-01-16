@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nsdk_61">61dp</dimen>
+    <dimen name="nsdk_66">66dp</dimen>
+    <dimen name="nsdk_76">76dp</dimen>
+    <dimen name="nsdk_142">142dp</dimen>
+    <dimen name="nsdk_208">208dp</dimen>
+    <dimen name="nsdk_132">132dp</dimen>
+    <dimen name="nsdk_131">131dp</dimen>
+    <dimen name="nsdk_130">130dp</dimen>
+    <dimen name="nsdk_126">126dp</dimen>
+    <dimen name="nsdk_128">128dp</dimen>
+    <dimen name="nsdk_127">127dp</dimen>
+    <dimen name="nsdk_55">55dp</dimen>
+    <dimen name="nsdk_120">120dp</dimen>
+    <dimen name="nsdk_124">124dp</dimen>
+
+    <!-- pull to refresh -->
+    <dimen name="nsdk_indicator_right_padding">10dp</dimen>
+    <dimen name="nsdk_indicator_corner_radius">12dp</dimen>
+    <dimen name="nsdk_indicator_internal_padding">4dp</dimen>
+    <dimen name="nsdk_header_footer_left_right_padding">24dp</dimen>
+    <dimen name="nsdk_header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="nsdk_cruise_guide_text_size">18sp</dimen>
+    <dimen name="nsdk_cruise_guide_title_text_size">21sp</dimen>
+
+    <!-- 导航中 -->
+    <dimen name="nsdk_rg_land_left_panel_width">192dp</dimen>
+    <dimen name="nsdk_rg_cp_bottom_height">50dp</dimen>
+    <dimen name="nsdk_rg_vline_width">2dp</dimen>
+    <dimen name="nsdk_rg_control_panel_btn_width">57dp</dimen>
+    <dimen name="nsdk_rg_control_panel_btn_height">57dp</dimen>
+    <dimen name="nsdk_rg_control_zoom_layout_height">50dp</dimen>
+    <dimen name="nsdk_rg_control_zoom_panel_btn_height">106dp</dimen>
+    <dimen name="nsdk_rg_control_panel_btn_text_size">11sp</dimen>
+    <dimen name="nsdk_rg_control_panel_btn_shadow">2dp</dimen>
+    <dimen name="nsdk_rg_control_panel_line_width">48dp</dimen>
+    <dimen name="nsdk_rg_control_panel_vertical_line_height">15dp</dimen>
+    <dimen name="nsdk_rg_text_margin">16dp</dimen>
+    <dimen name="nsdk_rg_control_panel_btn_margin_top">-3dp</dimen>
+
+    <dimen name="nsdk_rg_enlarge_btn_width">48dp</dimen>
+    <dimen name="nsdk_rg_enlarge_btn_height">48dp</dimen>
+    <dimen name="nsdk_rg_icon_edge_margin">10dp</dimen>
+    <dimen name="nsdk_rg_icon_turn_zise">68dp</dimen>
+    <dimen name="nsdk_rg_icon_simple_mode_turn_zise">43dp</dimen>
+    <dimen name="nsdk_rg_cur_road_name_width">115dp</dimen>
+    <dimen name="nsdk_rg_cur_road_name_horizontal_margin">6dp</dimen>
+    <dimen name="nsdk_rg_operable_notify_height">74dp</dimen>
+    <dimen name="nsdk_rg_control_panel_bottom_margin">68dp</dimen>
+    <dimen name="nsdk_rg_road_condition_bar_width">28dp</dimen>
+    <dimen name="nsdk_rg_road_condition_bar_margin_right">3dp</dimen>
+    <dimen name="nsdk_rg_road_condition_bar_default_margin_top">6dp</dimen>
+    <dimen name="nsdk_rg_simple_mode_road_condition_bar_default_margin_top">150dp</dimen>
+    <dimen name="nsdk_rg_panel_horizontal_margin">6dp</dimen>
+    <dimen name="nsdk_rg_panel_margin_top">5dp</dimen>
+    <dimen name="nsdk_rg_simple_mode_guide_icon_margin_bottom">12dp</dimen>
+    <dimen name="nsdk_rg_guide_panel_radius">7dp</dimen>
+    <dimen name="nsdk_rg_assist_panel_icon_radius">5dp</dimen>
+    <dimen name="nsdk_rg_simple_model_guide_panel_width">124dp</dimen>
+    <dimen name="nsdk_rg_simple_model_guide_panel_height">139dp</dimen>
+    <dimen name="nsdk_rg_toolbox_margin_left">8dp</dimen>
+
+    <dimen name="nsdk_rg_checkbox_notify_height">163dp</dimen>
+    <dimen name="nsdk_rg_control_button_text_margin_top">-4dp</dimen>
+    <dimen name="nsdk_rg_control_panel_margin_left">-5dp</dimen>
+
+    <dimen name="nsdk_rg_assist_panel_margin_top_land">-6dp</dimen>
+    <dimen name="nsdk_rg_control_panel_margin_top_land">-10dp</dimen>
+    <dimen name="nsdk_rg_control_panel_voice_item_margin_top">-2.5dp</dimen>
+    <dimen name="nsdk_rg_control_panel_voice_btn_margin_top">-1dp</dimen>
+    <dimen name="nsdk_rg_dest_arrivel_time_padding_left">12dp</dimen>
+
+    <!--放大图-->
+    <dimen name="nsdk_rg_enlarge_guide_info_height">36dp</dimen>
+    <dimen name="nsdk_rg_enlarge_guide_info_margin_bottom">6dp</dimen>
+    <dimen name="nsdk_rg_enlarge_next_turn_size">18dp</dimen>
+    <dimen name="nsdk_rg_enlarge_bottom_shadow_height">2dp</dimen>
+    <dimen name="nsdk_rg_enlarge_remain_dist_margin_left">15dp</dimen>
+    <dimen name="nsdk_rg_enlarge_remain_dist_unit_margin_left">5dp</dimen>
+    <dimen name="nsdk_rg_enlarge_enter_text_margin_left">9dp</dimen>
+    <dimen name="nsdk_rg_enlarge_panel_enlarge_margin_left">9dp</dimen>
+
+
+    <!-- 导航中 字体 -->
+    <dimen name="nsdk_text_size_rg_main_info">30sp</dimen>
+    <dimen name="nsdk_text_size_rg_second_info">22sp</dimen>
+    <dimen name="nsdk_text_size_rg_cp_fullview">14sp</dimen>
+    <dimen name="nsdk_text_size_rg_cp_total_dist_time">14sp</dimen>
+    <dimen name="nsdk_text_size_rg_hw_service_info">12sp</dimen>
+    <dimen name="nsdk_text_size_rg_fullview_continue_nav">22sp</dimen>
+    <dimen name="nsdk_text_size_rg_hud_main">56sp</dimen>
+    <dimen name="nsdk_text_size_rg_hud_second">28sp</dimen>
+    <dimen name="nsdk_text_size_rg_hud_landscape_main">40sp</dimen>
+    <dimen name="nsdk_text_size_rg_hud_landscape_second">25sp</dimen>
+    <dimen name="nsdk_text_size_progress_circle_normal">42sp</dimen>
+    <dimen name="nsdk_text_size_progress_circle_small">38sp</dimen>
+    <!-- 导航中 菜单 -->
+    <dimen name="nsdk_rg_menu_item_height">56dp</dimen>
+    <dimen name="nsdk_rg_ugc_menu_item_height">56dp</dimen>
+    <!--更多设置-->
+    <dimen name="nsdk_more_setting_menu_height">43dp</dimen>
+    <dimen name="nsdk_more_setting_menu_item_height">66dp</dimen>
+    <dimen name="nsdk_more_setting_menu_item_text_size">15dp</dimen>
+    <dimen name="nsdk_more_setting_menu_item_padding_left">15dp</dimen>
+    <dimen name="nsdk_more_setting_menu_item_padding_right">15dp</dimen>
+    <!-- 导航中 v4.0 end -->
+
+    <dimen name="nsdk_checkbox_padding_left">25dp</dimen>
+
+    <!-- 导航过程界面干预型信息域高度  -->
+    <dimen name="nsdk_rg_intervene_height">112dp</dimen>
+    <!-- 导航过程界面非干预型信息域高度  -->
+    <dimen name="nsdk_rg_not_intervene_height">48dp</dimen>
+
+
+    <!-- 轻导航常用地址管理页 -->
+    <dimen name="nsdk_ipo_title_bar_height">50dp</dimen>
+    <dimen name="nsdk_ipo_icon_size">24dp</dimen>
+    <dimen name="nsdk_ipo_title_margin">16dp</dimen>
+    <dimen name="nsdk_ipo_home_addr_item_height">72dp</dimen>
+    <dimen name="nsdk_ipo_fav_addr_margin">20dp</dimen>
+    <dimen name="nsdk_ipo_fav_addr_item_height">56dp</dimen>
+    <dimen name="nsdk_ipo_addr_edit_item_height">47dp</dimen>
+    <dimen name="nsdk_ipo_addr_del_title_height">88dp</dimen>
+    <dimen name="nsdk_ipo_title_text_size">20sp</dimen>
+    <dimen name="nsdk_ipo_common_text_size">16sp</dimen>
+    <dimen name="nsdk_ipo_menu_text_size">15sp</dimen>
+    <dimen name="nsdk_ipo_edit_addr_text_size">13sp</dimen>
+    <dimen name="nsdk_ipo_popup_window_text_size">17sp</dimen>
+    <dimen name="nsdk_ipo_addr_sug_item_height">55dp</dimen>
+    <dimen name="nsdk_light_navi_top_bar_height">60dp</dimen>
+    <dimen name="nsdk_light_navi_bottom_bar_height">52dp</dimen>
+    <dimen name="nsdk_light_navi_bottom_bar_height_with_shadow">58dp</dimen>
+    <dimen name="nsdk_light_navi_bottom_tab_height">78dp</dimen>
+    <dimen name="nsdk_light_navi_bottom_single_tab_height">48dp</dimen>
+    <dimen name="nsdk_light_navi_map_left_padding">8dp</dimen>
+    <dimen name="nsdk_light_navi_map_bottom_margin">138dp</dimen><!--bottomBarHeight + tabsHeight-->
+    <dimen name="nsdk_light_navi_map_right_padding">8dp</dimen>
+    <dimen name="nsdk_light_navi_tool_box_item_width">43dp</dimen>
+    <dimen name="nsdk_light_navi_tool_box_container_width">225dp</dimen>
+    <dimen name="nsdk_light_navi_tool_box_container_height">146dp</dimen>
+    <dimen name="nsdk_light_navi_tool_box_menu_width">75dp</dimen>
+    <dimen name="nsdk_light_navi_tool_box_menu_height">73dp</dimen>
+    <dimen name="nsdk_light_navi_yaw_height">40dp</dimen>
+    <dimen name="nsdk_light_navi_yaw_top_margin">2dp</dimen>
+    <dimen name="nsdk_light_navi_map_btn_width">58dp</dimen>
+    <dimen name="nsdk_light_navi_top_height_with_status">75dp</dimen>
+    <dimen name="nsdk_light_navi_top_height_with_status_and_shadow">81dp</dimen>
+
+
+    <!-- 8.8导航中改版 -->
+    <dimen name="nsdk_rg_intervene_control_height">48dp</dimen>
+    <dimen name="nsdk_rg_cp_icon_edge_margin">8dp</dimen>
+    <dimen name="nsdk_rg_control_panel_icon_size">31dp</dimen>
+    <dimen name="nsdk_rg_top_status_port_height">31dp</dimen>
+    <dimen name="nsdk_rg_road_condition_btn_height">31dp</dimen>
+    <dimen name="nsdk_rg_top_status_land_height">56dp</dimen>
+    <dimen name="nsdk_text_size_no_satellite">22dp</dimen>
+    <dimen name="nsdk_rg_top_panel_height">120dp</dimen>
+    <dimen name="nsdk_rg_top_guide_text_margin">24dp</dimen>
+    <dimen name="nsdk_text_size_rg_num_info">34dp</dimen>
+    <dimen name="nsdk_text_size_rg_normal_info">22dp</dimen>
+    <dimen name="nsdk_text_size_simple_mode_guide">27dp</dimen>
+    <dimen name="nsdk_text_size_end_simple_mode_guide">16dp</dimen>
+
+    <dimen name="nsdk_rg_top_guide_text_layout_width">214dp</dimen>
+    <dimen name="nsdk_rg_top_guide_turn_icon_margin">10dp</dimen>
+    <dimen name="nsdk_rg_guide_land_text_margin">5dp</dimen>
+    <dimen name="nsdk_rg_top_guide_panel_margin_right_to_devices_view">30dp</dimen>
+
+    <dimen name="nsdk_rg_guide_panel_shadow_top">3dp</dimen>
+    <dimen name="nsdk_rg_guide_panel_shadow_left">9dp</dimen>
+    <dimen name="nsdk_rg_guide_panel_shadow_bottom">10dp</dimen>
+    <dimen name="nsdk_rg_guide_panel_shadow_left_real_size">43px</dimen>
+
+
+    <!--语音态-->
+    <dimen name="nsdk_rg_voice_top_panel_radius">5dp</dimen>
+    <dimen name="nsdk_rg_voice_play_state_margin_top">83dp</dimen>
+    <dimen name="nsdk_rg_voice_fuse_panel_height">204dp</dimen>
+    <dimen name="nsdk_rg_voice_guide_info_layout_height">40dp</dimen>
+
+    <!-- 9.0运营红包大小 -->
+    <dimen name="nsdk_holiday_animation_im_gift_width">72dp</dimen>
+    <dimen name="nsdk_holiday_animation_im_gift_height">57dp</dimen>
+    <dimen name="nsdk_holiday_animation_im_num_width">24dp</dimen>
+    <dimen name="nsdk_holiday_animation_im_num_height">24dp</dimen>
+    <dimen name="nsdk_holiday_animation_im_margin_left">12dp</dimen>
+    <dimen name="nsdk_holiday_animation_im_margin_bottom">15dp</dimen>
+
+    <!-- 路测工具 -->
+    <dimen name="nsdk_driving_tool_store_sp_width">260dp</dimen>
+    <dimen name="nsdk_driving_tool_first_tx_size">12sp</dimen>
+    <dimen name="nsdk_driving_tool_add_attch">100dp</dimen>
+    <dimen name="nsdk_driving_tool_sp_height">42dp</dimen>
+    <dimen name="nsdk_driving_tool_button_height">42dp</dimen>
+
+    <!-- 喜马拉雅 -->
+    <dimen name="nsdk_ting_notification_layout_margin">10dp</dimen>
+    <dimen name="nsdk_ting_notification_icon_map_width">50dp</dimen>
+    <dimen name="nsdk_ting_notification_icon_map_height">50dp</dimen>
+    <dimen name="nsdk_ting_notification_name_margin_bottom">4dp</dimen>
+    <dimen name="nsdk_ting_notification_audio_name_size">15dp</dimen>
+    <dimen name="nsdk_ting_notificaton_btn_height">27dp</dimen>
+    <dimen name="nsdk_ting_notificaton_btn_margin">7dp</dimen>
+
+    <!-- v9.3 诱导卡片优化 -->
+    <dimen name="nsdk_rg_device_state_margin_right">8dp</dimen>
+    <dimen name="nsdk_rg_device_state_ly_margin_top">14dp</dimen>
+    <dimen name="nsdk_rg_device_state_icon_margin_top">9dp</dimen>
+    <dimen name="nsdk_rg_device_state_land_icon_margin_left">7dp</dimen>
+    <dimen name="nsdk_rg_device_state_icon_width">16dp</dimen>
+    <dimen name="nsdk_rg_device_state_icon_height">16dp</dimen>
+
+    <!-- v9.4 Instant二期干预框 -->
+    <dimen name="nsdk_rg_faster_route_intervene_height">138dp</dimen>
+
+    <!-- v9.4 新高速模式 -->
+    <dimen name="nsdk_rg_hw_service_area_panel_width">120dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_name_max_width">104dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_width">114dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_height">81dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_icon_width">20dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_icon_height">20dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_icon_margin_top">6dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_icon_margin_left">2dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_name_margin_top">2dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_name_margin_left">5dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_dist_margin_bottom">4dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_dist_margin_right">6dp</dimen>
+    <dimen name="nsdk_rg_service_subscribe_list_item_dist_margin_left">10dp</dimen>
+
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_width">106dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_height">44dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_margin_top">-8dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_icon_margin_bottom">8dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_icon_margin_left">8dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_dist_margin_bottom">8dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_bottom_dist_margin_right">6dp</dimen>
+
+    <dimen name="nsdk_rg_hw_service_area_panel_top_exit_name_margin_right">6dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_exit_name_margin_bottom">4dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_top_exit_name_max_width">108dp</dimen>
+
+    <dimen name="nsdk_rg_hw_service_area_panel_text_name">16dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_text_dist">22dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_text_unit">12dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_text_exit_code">16dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_text_exit_name">16dp</dimen>
+    <dimen name="nsdk_rg_hw_simple_board_margin_right">6dp</dimen>
+    <dimen name="nsdk_rg_hw_simple_board_margin_left">3dp</dimen>
+    <dimen name="nsdk_rg_hw_simple_board_margin_top">8dp</dimen>
+    <dimen name="nsdk_rg_hw_subscript_list_head_number_size">31dp</dimen>
+    <dimen name="nsdk_rg_hw_subscript_list_head_text_size">12dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_min_width">110dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_max_width">160dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_subscript_icon_size">14dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_subscript_icon_margin_right">5dp</dimen>
+    <dimen name="nsdk_rg_hw_service_area_panel_padding_left">10dp</dimen>
+    <dimen name="nsdk_rg_normal_service_area_panel_height">91dp</dimen>
+    <dimen name="nsdk_rg_bottom_single_type_service_area_panel_height">45dp</dimen>
+    <dimen name="nsdk_rg_single_type_service_area_panel_height">66dp</dimen>
+
+    <!--高速mini面板-->
+    <dimen name="nsdk_rg_top_guide_mini_height">67dp</dimen>
+    <dimen name="nsdk_text_size_guide_mini_info">19dp</dimen>
+    <dimen name="nsdk_rg_highway_mini_direction_text_width">50dp</dimen>
+    <dimen name="nsdk_rg_highway_mini_direction_margin_right">3dp</dimen>
+    <dimen name="nsdk_rg_highway_mini_icon_width">30dp</dimen>
+    <dimen name="nsdk_rg_highway_mini_icon_margin_left">8dp</dimen>
+    <dimen name="nsdk_rg_highway_mini_icon_margin_right">6dp</dimen>
+
+    <!-- 车道线  -->
+    <dimen name="nsdk_rg_lane_line_margin_top">6dp</dimen>
+    <dimen name="nsdk_rg_lane_line_image_width_big">30dp</dimen>
+    <dimen name="nsdk_rg_lane_line_image_height_big">38dp</dimen>
+    <dimen name="nsdk_rg_lane_line_image_width_medium">27dp</dimen>
+    <dimen name="nsdk_rg_lane_line_image_height_medium">34dp</dimen>
+    <dimen name="nsdk_rg_lane_line_image_width_small">22dp</dimen>
+    <dimen name="nsdk_rg_lane_line_image_height_small">28dp</dimen>
+    <dimen name="nsdk_rg_lane_total_width">282dp</dimen>
+    <dimen name="nsdk_rg_follow_layout_width">78dp</dimen>
+    <dimen name="nsdk_rg_follow_layout_height_big">54dp</dimen>
+    <dimen name="nsdk_rg_follow_layout_height_medium">36dp</dimen>
+    <dimen name="nsdk_rg_follow_layout_height_small">30dp</dimen>
+    <dimen name="nsdk_rg_follow_image_height">22dp</dimen>
+    <dimen name="nsdk_rg_follow_out_padding">10dp</dimen>
+    <dimen name="nsdk_rg_follow_in_padding">4dp</dimen>
+
+    <dimen name="nsdk_rg_bottom_panel_height">57dp</dimen>
+
+    <!--ugc 相关参数-->
+    <dimen name="nsdk_ugc_details_title_height">47dp</dimen>
+    <dimen name="nsdk_ugc_report_grid_margin">44dp</dimen>
+    <dimen name="nsdk_ugc_report_grid_item_img_size">68dp</dimen>
+    <dimen name="nsdk_ugc_detail_loading_footer_height">70dp</dimen>
+    <dimen name="nsdk_ugc_detail_post_comment_height">62dp</dimen>
+    <dimen name="nsdk_ugc_report_edit_text_size">14sp</dimen>
+    <dimen name="nsdk_ugc_details_card_useful_icon_height">13dp</dimen>
+    <dimen name="nsdk_ugc_details_card_useful_text_size">12sp</dimen>
+    <dimen name="nsdk_ugc_details_card_padding_left_right">15dp</dimen>
+    <dimen name="nsdk_ugc_event_details_video_width">206dp</dimen>
+    <dimen name="nsdk_ugc_event_details_video_height">104dp</dimen>
+    <dimen name="nsdk_ugc_details_comment_heard_title_height">47dp</dimen>
+    <dimen name="nsdk_ugc_details_new_comment_loading_height">30dp</dimen>
+    <dimen name="nsdk_ugc_details_label_padding">5dp</dimen>
+    <dimen name="nsdk_ugc_details_comment_label_radius">2.5dp</dimen>
+
+    <dimen name="nsdk_more_setting_btn_panel_title_top_margin">16dp</dimen>
+    <dimen name="nsdk_more_setting_btn_panel_title_bottom_margin">12dp</dimen>
+
+    <dimen name="nsdk_map_status_y_offset">108dp</dimen>
+    <dimen name="nsdk_cur_road_name_height">32dp</dimen>
+    <dimen name="nsdk_rg_anolog_navi_bottom_margin">8dp</dimen>
+
+    <dimen name="nsdk_rg_checkbox_notification_margin_left">66dp</dimen>
+
+    <!--码表、区间测速-->
+    <dimen name="nsdk_rg_interval_camera_panel_size">60dp</dimen>
+    <dimen name="nsdk_rg_cur_car_speed_anim_panel_size">66dp</dimen>
+    <dimen name="nsdk_rg_panel_size">60dp</dimen>
+
+    <!--终点提醒卡片-->
+    <dimen name="nsdk_des_reminder_card_margin_left">12dp</dimen>
+
+    <!--驾车页-->
+    <dimen name="nsdk_route_result_future_trip_panel_height">319dp</dimen>
+    <dimen name="nsdk_route_result_ny_arrow_margin_top">-4dp</dimen>
+    <dimen name="nsdk_route_result_center_panel_margin_top">160dp</dimen>
+    <dimen name="nsdk_route_result_center_panel_margin_left_right">7dp</dimen>
+    <dimen name="nsdk_route_result_center_panel_margin_tab">10dp</dimen>
+    <dimen name="nsdk_route_result_multi_tab_height">140dp</dimen>
+    <dimen name="nsdk_route_result_single_tab_height">121dp</dimen>
+    <dimen name="nsdk_route_result_notify_msg_height">47dp</dimen>
+    <dimen name="nsdk_route_result_notify_msg_margin_top">2dp</dimen>
+    <dimen name="nsdk_route_result_show_rect_margin_top">11dp</dimen>
+
+    <!--沿途搜-->
+    <dimen name="nsdk_rg_nearby_search_filter_width">48dp</dimen>
+
+
+
+</resources>

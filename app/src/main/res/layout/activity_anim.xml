@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+    <RelativeLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+            <include
+                    android:id="@+id/left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bnav_interval_camera_layout"
+            ></include>
+            <include
+                    android:id="@+id/right"
+                    android:layout_marginTop="210dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bnav_interval_camera_layout_land"
+            ></include>
+        </RelativeLayout>
+        <LinearLayout android:id="@+id/control_panel1"
+                      android:layout_alignParentRight="true"
+                      android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="300dp">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="0dp"
+                      android:textSize="20dp"
+                      android:background="@android:color/holo_green_light"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:text="进场"
+                      android:tag="1"
+                      android:id="@+id/enter"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="0dp"
+                      android:textSize="20dp"
+                      android:background="@android:color/holo_red_dark"
+                      android:text="出场"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:id="@+id/exit"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="0dp"
+                      android:textSize="20dp"
+                      android:background="@android:color/holo_red_dark"
+                      android:text="结束"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:id="@+id/stop"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
