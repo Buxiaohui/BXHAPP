@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="140dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:text="18:30"
+        android:textColor="#3385ff" />
+
+    <ProgressBar
+        android:id="@+id/histogram_item_progress"
+        android:layout_width="20dp"
+        android:layout_height="150dp"
+        android:indeterminateOnly="false"
+        android:layout_above="@+id/name"
+        android:max="100"
+        android:progress="60"
+        android:layout_marginBottom="21dp"
+        android:layout_centerHorizontal="true"
+        android:progressDrawable="@drawable/histogram_item_bg" />
+
+</RelativeLayout>

@@ -19,16 +19,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  fluttertoast: ^2.2.3
+  fluttertoast: ^2.0.3
+  json_annotation: ^2.0.0
+  video_player: ^0.6.0
+  flutter_webview_plugin: ^0.3.0+2
+  dio: ^1.0.13
+  path_provider: ^0.4.1
+  simple_permissions: ^0.1.9
+  # 进度条
+  percent_indicator: "^1.0.12"
+  # 音频播放flutter
+  audioplayers: ^0.8.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  build_runner: ^1.0.0
+  json_serializable: ^2.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
@@ -37,7 +45,47 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  assets:
+      - assets/images/light.png
+      - assets/images/ic_detail.png
+      - assets/images/img_hand_2_left.png
+      # 歌曲封面
+      - assets/images/record_plate_bruno_mars.jpeg
+      - assets/images/record_plate.jpg
+      # 收藏、下载、评论、更多
+      - assets/images/comment.png
+      - assets/images/comment_28.png
+      - assets/images/comment_red.png
+      - assets/images/comment_red_28.png
+      - assets/images/comment_white_28.png
+      - assets/images/download.png
+      - assets/images/download_28.png
+      - assets/images/download_red.png
+      - assets/images/download_red_28.png
+      - assets/images/download_white_28.png
+      - assets/images/favorite.png
+      - assets/images/favorite_28.png
+      - assets/images/favorite_red.png
+      - assets/images/favorite_red_28.png
+      - assets/images/favorite_white_28.png
+      - assets/images/more.png
+      - assets/images/more_28.png
+      - assets/images/more_red.png
+      - assets/images/more_red_28.png
+      - assets/images/more_white_28.png
+      # 播放相关
+      - assets/images/play.png
+      - assets/images/play_red.png
+      - assets/images/play_white_28.png
+      - assets/images/pause.png
+      - assets/images/pause_red.png
+      - assets/images/pause_white_28.png
+      - assets/images/pre.png
+      - assets/images/pre_red.png
+      - assets/images/pre_white_28.png
+      - assets/images/next.png
+      - assets/images/next_red.png
+      - assets/images/next_white_28.png
   # To add Flutter specific assets to your application, add an assets section, 
   # like this:
   # assets:

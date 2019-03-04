@@ -29,6 +29,7 @@
         <activity android:name=".flutter.FlutterFirstActivity"></activity>
         <activity android:name=".flutter.FlutterSecondActivity"></activity>
         <activity android:name=".flutter.Flutter2NaActivity"></activity>
+        <activity android:name=".histogram.HistogramActivity"></activity>
     </application>
 
 </manifest>

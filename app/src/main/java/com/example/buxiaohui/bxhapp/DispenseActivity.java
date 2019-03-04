@@ -8,6 +8,7 @@ import java.util.Map;
 import com.example.buxiaohui.bxhapp.anim.AnimActivity;
 import com.example.buxiaohui.bxhapp.flutter.Flutter2NaActivity;
 import com.example.buxiaohui.bxhapp.flutter.FlutterTestAddViewActivity;
+import com.example.buxiaohui.bxhapp.histogram.HistogramActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import com.example.buxiaohui.bxhapp.R;
 
 public class DispenseActivity extends AppCompatActivity {
     private List<Map<String, String>> listViewUIList = new ArrayList<Map<String, String>>();
@@ -37,6 +39,7 @@ public class DispenseActivity extends AppCompatActivity {
         dataList.add(new DispenseActivityMode("测试区间测速动画", AnimActivity.class));
         dataList.add(new DispenseActivityMode("Native add Flutter View", FlutterTestAddViewActivity.class));
         dataList.add(new DispenseActivityMode("Flutter与Native交互", Flutter2NaActivity.class));
+        dataList.add(new DispenseActivityMode("柱状图", HistogramActivity.class));
         for (int i = 0; i < dataList.size(); i++) {
             listViewUIList.add(createActivityElement(i, dataList.get(i).getDesc()));
         }

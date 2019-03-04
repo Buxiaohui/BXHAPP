@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="60dp"
+    android:layout_height="66dp"
+    android:background="@drawable/histogram_item_bg_border"
+    tools:background="@android:color/holo_green_light">
+
+    <!--fot test start-->
+    <ImageView
+        android:layout_width="52dp"
+        android:layout_height="33dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/nsdk_drawable_rr_eta_select_time_bg"
+        android:visibility="gone"
+        tools:visibility="visible" />
+    <!--fot test end-->
+
+    <TextView
+        android:id="@+id/time_tx"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:textColor="#3385ff"
+        tools:text="周一"
+        android:singleLine="true"
+        android:ellipsize="none"
+        tools:textSize="20dp" />
+    <TextView
+        android:id="@+id/index"
+        android:layout_below="@id/time_tx"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:textColor="#3385ff"
+        tools:text="周一"
+        tools:textSize="20dp" />
+</RelativeLayout>
+
