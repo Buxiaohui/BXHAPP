@@ -4,4 +4,5 @@ import android.view.View;
 
 public interface ItemClickListener {
     void onItemClick(int index, View view);
+    boolean isScrolling();
 }

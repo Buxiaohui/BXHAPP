@@ -12,7 +12,12 @@ public class FutureTripParams {
     public static final boolean DEBUG = false;
     // 功能控制位，居中的item是否变粗
     public static final boolean ENABLE_MORE_WIDTH_FUN = true;
-
+    public static final int OFFSET_HOUR_ON_INIT_START = 0;  // 向前0小时
+    public static final int OFFSET_HOUR_ON_INIT_END = 6;  // 向后6小时
+    public static final int OFFSET_HOUR_ON_SELECT_START = 3; // 前面3小时
+    public static final int OFFSET_HOUR_ON_SELECT_END = 3; // 后面3小时
+    public static final int OFFSET_HOUR_ON_PICK_TIME_START = 1; // 前面1小时
+    public static final int OFFSET_HOUR_ON_PICK_TIME_END = 1; // 后面1小时
     @IntDef({SubViewType.MAP_ZONE,
             SubViewType.MAIN_PANEL,
             SubViewType.TIME_PICKER_PANEL_CONTAINER,

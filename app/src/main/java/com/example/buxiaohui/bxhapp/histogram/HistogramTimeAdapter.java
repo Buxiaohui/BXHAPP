@@ -6,7 +6,6 @@ import com.example.buxiaohui.bxhapp.R;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Size;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +19,6 @@ public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.View
     private int indexSelected = -1;
     private SizeHolder sizeHolder;
 
-    public void setSizeHolder(SizeHolder sizeHolder) {
-        this.sizeHolder = sizeHolder;
-    }
-
     public HistogramTimeAdapter(Context context, float highStandard, List<HistogramAdapter.ItemData> mDatas) {
         mLayoutInflater = LayoutInflater.from(context);
         mContext = context;
@@ -31,12 +26,17 @@ public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.View
         this.mDatas = mDatas;
     }
 
+    public void setSizeHolder(SizeHolder sizeHolder) {
+        this.sizeHolder = sizeHolder;
+    }
+
     /**
      * 更新裁剪区域，显示底部时间选中态
      */
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ViewHolder holder = new ViewHolder(mLayoutInflater.inflate(R.layout.nsdk_layout_future_trip_main_panel_time_select_item, parent, false));
+        ViewHolder holder = new ViewHolder(
+                mLayoutInflater.inflate(R.layout.nsdk_layout_future_trip_main_panel_time_select_item, parent, false));
         return holder;
     }
 
@@ -47,16 +47,16 @@ public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.View
         TextView indexTv = ((ViewHolder) holder).getView(R.id.index);
         timeTv.setTag(position);
 
-        indexTv.setText(position+"");
+        indexTv.setText(position + "");
         timeTv.setText("21:00" + "出发");
         ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) holder.itemView.getLayoutParams();
-        if (data.getItemState() == FutureTripParams.ItemState.SELECT) {
+//        if (data.getItemState() == FutureTripParams.ItemState.SELECT) {
             layoutParams.width = sizeHolder.getItemSelectWidthPx();
-            //            timeTv.setText("" + position+" 出发");
-        } else {
-            layoutParams.width = sizeHolder.getItemWidthPx();
-            //            timeTv.setText("" + position);
-        }
+//            timeTv.setText("21:00出发");
+//        } else {
+//            layoutParams.width = sizeHolder.getItemWidthPx();
+//            timeTv.setText("12:00");
+//        }
     }
 
     @Override
@@ -81,4 +81,6 @@ public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.View
             return (T) itemView.findViewById(viewId);
         }
     }
+
+
 }

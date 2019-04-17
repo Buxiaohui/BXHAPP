@@ -50,7 +50,6 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
         this.setContentView(flutterView);
         return flutterView;
     }
-
     private void init() {
         Log.i(TAG, "--init");
 

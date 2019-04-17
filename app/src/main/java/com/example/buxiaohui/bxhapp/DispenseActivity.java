@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import com.example.buxiaohui.bxhapp.R;
+import com.example.buxiaohui.bxhapp.histogram.TimePickerActivity;
 
 public class DispenseActivity extends AppCompatActivity {
     private List<Map<String, String>> listViewUIList = new ArrayList<Map<String, String>>();
@@ -40,6 +41,7 @@ public class DispenseActivity extends AppCompatActivity {
         dataList.add(new DispenseActivityMode("Native add Flutter View", FlutterTestAddViewActivity.class));
         dataList.add(new DispenseActivityMode("Flutter与Native交互", Flutter2NaActivity.class));
         dataList.add(new DispenseActivityMode("柱状图", HistogramActivity.class));
+        dataList.add(new DispenseActivityMode("TimePicker", TimePickerActivity.class));
         for (int i = 0; i < dataList.size(); i++) {
             listViewUIList.add(createActivityElement(i, dataList.get(i).getDesc()));
         }

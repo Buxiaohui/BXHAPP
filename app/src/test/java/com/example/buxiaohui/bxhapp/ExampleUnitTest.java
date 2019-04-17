@@ -15,6 +15,8 @@ import android.util.Log;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
+        double successRate = (1d * 3) / (1d * 122);
+        successRate = (double) (Math.round(successRate * 100)) / 100 * 100;
         int a = 1;
         int b = 1<< 1;
         int c = 1<< 2;
@@ -24,7 +26,7 @@ public class ExampleUnitTest {
         int x = a|b|c|d|e;
         int y = b;
         int z = x&y;
-       System.out.println("addition_isCorrect,z:"+z);
+       System.out.println("addition_isCorrect,z:"+z+",,,,,successRate:"+successRate+",,,(int)successRate:"+(int)successRate);
        int m = 0;
        if(m > 999){
            int kilometer = m/1000;

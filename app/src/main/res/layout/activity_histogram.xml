@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:paddingLeft="8px"
+    android:paddingRight="8px"
     tools:context=".MainActivity">
 
     <android.support.v7.widget.RecyclerView
@@ -16,20 +18,21 @@
 
     <ImageView
         android:layout_width="75dp"
-        android:layout_height="33dp"
+        android:layout_height="29dp"
         android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="160dp"
-        android:background="@drawable/nsdk_drawable_rr_eta_select_time_bg"
+        android:background="@drawable/nsdk_drawable_future_trip_item_select_time_bg"
         android:visibility="visible" />
 
-    <com.example.buxiaohui.bxhapp.MyRecyclerView
+    <com.example.buxiaohui.bxhapp.histogram.FutureTripTimeListView
         android:id="@+id/histogram_select"
         android:layout_alignLeft="@id/histogram"
         android:layout_marginTop="170dp"
         android:layout_alignRight="@id/histogram"
         android:layout_width="match_parent"
         android:layout_height="66dp"
+        tools:visibility="invisible"
         tools:background="@android:color/holo_red_light" />
 
 
@@ -94,6 +97,7 @@
         android:layout_width="1.5dp"
         android:layout_height="match_parent"
         tools:visibility="visible" />
+
     <View
         android:visibility="visible"
         android:background="@drawable/histogram_item_bg_border"
@@ -101,10 +105,11 @@
         android:layout_width="75dp"
         android:layout_height="match_parent"
         tools:visibility="visible" />
+
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:id="@+id/btn_container"
         android:layout_below="@id/histogram"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="center_vertical"
@@ -118,11 +123,50 @@
             android:layout_width="0dp"
             android:layout_height="50dp" />
 
+        <TextView
+            android:id="@+id/init_and_to_pos"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="reInit and 滚动到"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
         <EditText
             android:id="@+id/to_pos"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/offset_layout"
+        android:orientation="horizontal"
+        android:layout_below="@id/btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/offset_0"
+            android:hint="offset_0"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/offset_1"
+            android:hint="offset_0"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/test_drawable"
+            android:hint="test_drawable"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/nsdk_route_result_depart_time"
+            android:drawableRight="@drawable/nsdk_route_result_future_depart_time_arrow_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

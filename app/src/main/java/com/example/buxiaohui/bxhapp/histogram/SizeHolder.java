@@ -40,21 +40,16 @@ public class SizeHolder {
 
     // 面板.9图阴影宽度,left=right
     private int mPanelBg9ImgLeftPaddingPx;
+    private double mScaleOfItemWidth;
 
     public void init(Activity ctx) {
-        //        mHistogramLeftPaddingPx = UIUtils.dip2px(ctx, 5);
         mScreenWithPx = UIUtils.getScreenSizePx(ctx)[0];
-//        mPanelBg9ImgLeftPaddingPx = 8;
-        mPanelBg9ImgLeftPaddingPx = 0;
-        mItemSelectWidthPx = UIUtils.dip2px(ctx, 75);
+        mPanelBg9ImgLeftPaddingPx = 8;
         mHistogramWithPx = mScreenWithPx - (mHistogramLeftPaddingPx << 1) - (mPanelBg9ImgLeftPaddingPx << 1);
-        // 展示7个item
-        if (mHistogramWithPx * 1f / (MAX_ITEM_COUNT - 1) - mHistogramWithPx / (MAX_ITEM_COUNT - 1) > 0f) {
-            mItemWidthPx = (mHistogramWithPx - mItemSelectWidthPx) / (MAX_ITEM_COUNT - 1) + 1;
-        } else {
-            mItemWidthPx = (mHistogramWithPx - mItemSelectWidthPx) / (MAX_ITEM_COUNT - 1);
-        }
-
+        double itemWidth = mHistogramWithPx / 7.5;
+        mItemWidthPx = (int)Math.ceil(itemWidth);
+        mItemSelectWidthPx = (int)Math.ceil(itemWidth * 1.5);
+        mScaleOfItemWidth = (1.0d * mItemSelectWidthPx) / (1.0d * mItemWidthPx);
         mItemPillarWidthPx = UIUtils.dip2px(ctx, 60);
         mPillarLeft = (mScreenWithPx >> 1) - (mItemPillarWidthPx >> 1);
         mPillarRight = (mScreenWithPx >> 1) + (mItemPillarWidthPx >> 1);
@@ -65,6 +60,10 @@ public class SizeHolder {
         mPilllarAnimRight = (mScreenWithPx >> 1) + mItemWidthPx / 6 * 2;
 
         mPanelBg9ImgLeftPaddingPx = UIUtils.dip2px(ctx, 0);
+    }
+
+    public double getmScaleOfItemWidth() {
+        return mScaleOfItemWidth;
     }
 
     public int getPanelBg9ImgPaddingPx() {

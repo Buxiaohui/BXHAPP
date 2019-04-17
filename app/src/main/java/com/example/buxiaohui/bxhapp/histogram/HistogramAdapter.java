@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -141,9 +142,19 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             layoutParams.width =sizeHolder.getItemWidthPx();
             //            timeTv.setText("" + position);
         }
+//        layoutParams.width = data.width;
         timeTv.setText("" + position);
         timeTv.setTag(position);
         durationTv.setText("haha");
+//        holder.itemView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if (itemClickListener != null) {
+//                    return itemClickListener.isScrolling();
+//                }
+//                return false;
+//            }
+//        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -211,7 +222,19 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         private boolean select;
         private int itemState;
         private float progress;
+        private int width;
 
+        public int getWidth() {
+            return width;
+        }
+
+        public void setWidth(int width) {
+            this.width = width;
+        }
+
+        public ItemData(String name) {
+            this.name = name;
+        }
         public ItemData(String name, float progress) {
             this.name = name;
             this.progress = progress;
