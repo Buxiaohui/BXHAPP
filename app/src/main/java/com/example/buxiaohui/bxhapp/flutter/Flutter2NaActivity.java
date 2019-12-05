@@ -45,18 +45,21 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
         WindowManager.LayoutParams matchParent = new WindowManager.LayoutParams(-1, -1);
         nativeView = this.createFlutterNativeView();
         flutterView = new FlutterView(this, (AttributeSet) null, nativeView);
+        Log.i(TAG, "--createFlutterView,nativeView:" + nativeView);
         flutterView.setInitialRoute("route4");
         flutterView.setLayoutParams(matchParent);
         this.setContentView(flutterView);
         return flutterView;
     }
+
     private void init() {
         Log.i(TAG, "--init");
 
         Registrar registrar = registrarFor("buxiaohui.flutter.m1/plugin");
         registrar.addRequestPermissionsResultListener(new RequestPermissionsResultListener() {
             @Override
-            public boolean onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+            public boolean onRequestPermissionsResult(int requestCode, String[] permissions,
+                                                      int[] grantResults) {
                 Log.i(TAG, "--onRequestPermissionsResult,requestCode:" + requestCode
                         + ",permissions:" + permissions
                         + ",grantResults:" + Arrays.toString(grantResults));
@@ -74,10 +77,12 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
                         Uri uri = data.getData();
                         if (uri != null) {
                             // 拿到音频文件uri,开始播放。
-                            Toast.makeText(Flutter2NaActivity.this, uri.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Flutter2NaActivity.this, uri.toString(),
+                                    Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Toast.makeText(Flutter2NaActivity.this, "invalid media file", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Flutter2NaActivity.this, "invalid media file",
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -100,7 +105,8 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
             public void onMethodCall(MethodCall methodCall, MethodChannel.Result result) {
                 Log.i(TAG, "--onMethodCall,methodCall:" + methodCall);
                 if (methodCall.method.equals("toast")) {
-                    Toast.makeText(Flutter2NaActivity.this, (String) (methodCall.argument("msg")), Toast.LENGTH_SHORT)
+                    Toast.makeText(Flutter2NaActivity.this, (String) (methodCall.argument("msg")),
+                            Toast.LENGTH_SHORT)
                             .show();
                     result.success("成功了");
                 }
@@ -122,7 +128,8 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
                     String text = methodCall.argument("flutter");
 
                     //带参数跳转到指定Activity
-                    Intent intent = new Intent(Flutter2NaActivity.this, FlutterSecondActivity.class);
+                    Intent intent =
+                            new Intent(Flutter2NaActivity.this, FlutterSecondActivity.class);
                     intent.putExtra("data", text);
                     Flutter2NaActivity.this.startActivity(intent);
 
@@ -141,7 +148,8 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
 
         });
         final EventChannel eventChannel =
-                new EventChannel(flutterView, "buxiaohui.flutter.e1/plugin", StandardMethodCodec.INSTANCE);
+                new EventChannel(flutterView, "buxiaohui.flutter.e1/plugin",
+                        StandardMethodCodec.INSTANCE);
         eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
             @Override
             public void onListen(Object arguments, EventChannel.EventSink events) {
@@ -158,8 +166,9 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
 
     @Override
     public FlutterNativeView createFlutterNativeView() {
-        Log.i(TAG, "createFlutterNativeView");
-        return super.createFlutterNativeView();
+        FlutterNativeView flutterNativeView = super.createFlutterNativeView();
+        Log.i(TAG, "createFlutterNativeView,flutterNativeView:" + flutterNativeView);
+        return flutterNativeView;
     }
 
     @Override
@@ -210,7 +219,8 @@ public class Flutter2NaActivity extends io.flutter.app.FlutterActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                           int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 

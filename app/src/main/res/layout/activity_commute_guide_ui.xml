@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/guide_head_layout"
+        layout="@layout/layout_commute_guide_top_panel" />
+
+    <LinearLayout
+        android:id="@+id/top_panel_control_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guide_head_layout"
+        android:layout_alignParentBottom="false">
+
+        <Button
+            android:id="@+id/spread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="spread" />
+
+        <Button
+            android:id="@+id/pack_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pack up" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btns_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_panel_control_panel"
+        android:layout_alignParentBottom="false"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/show_notice_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show_notice_0" />
+
+        <Button
+            android:id="@+id/show_notice_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show_notice_1" />
+
+        <Button
+            android:id="@+id/show_notice_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知型_0" />
+
+        <Button
+            android:id="@+id/show_notice_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知型_1" />
+
+        <Button
+            android:id="@+id/show_notice_yaw_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="偏航失败" />
+
+        <Button
+            android:id="@+id/hide_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hide_cur" />
+
+        <Button
+            android:id="@+id/hide_notice_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hide_target" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/test_btn_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/btns_container"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/test_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nsdk_note_confirm_bt_bg_selector"
+            android:padding="10dp"
+            android:text="测试按钮" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/notification_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        tools:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/notification_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

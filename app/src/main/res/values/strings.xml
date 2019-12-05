@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">卜晓辉的Demo</string>
+    <string name="app_name">辉的Demo</string>
     <item type="id" name="tag_first"></item>
     <item type="id" name="tag_sec"></item>
+    <!-- commute -->
+    <string name="nsdk_commute_notify_gps_week">GPS信号弱，请谨慎驾驶</string>
 </resources>

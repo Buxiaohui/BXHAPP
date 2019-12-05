@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:background="#00ff00">
+
+    <RelativeLayout
+        android:id="@+id/speed_layout"
+        android:layout_width="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="66dp"
+        tools:background="#00ff00">
+
+
+        <View
+            android:id="@+id/bnav_rg_cp_cur_overspeed_anim_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nsdk_drawable_rg_assist_overspeed_anim_bg" />
+
+        <RelativeLayout
+            android:id="@+id/bnav_rg_cp_car_speed_bg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nsdk_drawable_rg_assist_normal_speed"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bnav_rg_cp_cur_car_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="-0.03"
+                    android:textColor="#3884fc"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    tools:text="0" />
+
+                <TextView
+                    android:id="@+id/bnav_rg_cp_cur_car_speed_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:text="km/h"
+                    android:textColor="#3884fc"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignLeft="@id/speed_layout"
+        android:layout_alignRight="@id/speed_layout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/speed_layout">
+
+        <ImageView
+            android:id="@+id/speed_desc_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            tools:src="@drawable/nsdk_drawable_cheetah_mid_speed" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -2,7 +2,7 @@ package com.example.buxiaohui.bxhapp.histogram;
 
 import java.util.ArrayList;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
+import bnav.baidu.com.sublog.LogUtil;
 
 public class FuturetripLimit {
 

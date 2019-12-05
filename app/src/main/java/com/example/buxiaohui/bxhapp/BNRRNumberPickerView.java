@@ -23,7 +23,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
-import android.view.ViewConfiguration;
+import android.view.ViewConfiguration;import bnav.baidu.com.sublog.LogUtil;
 
 public class BNRRNumberPickerView extends View {
     private static final String TAG = "NumberPickerView";

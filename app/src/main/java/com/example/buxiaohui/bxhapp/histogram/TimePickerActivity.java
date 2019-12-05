@@ -1,6 +1,5 @@
 package com.example.buxiaohui.bxhapp.histogram;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
 import com.example.buxiaohui.bxhapp.R;
 
 import android.app.Activity;
@@ -9,7 +8,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
+import bnav.baidu.com.sublog.LogUtil;
 public class TimePickerActivity extends Activity {
     private static final String TAG = "HistogramActivity";
     private Long mEnterTime;

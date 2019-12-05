@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/rr_empty_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/white" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="@dimen/nsdk_100"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rr_empty_top_layout" />
+    <View
+        android:id="@+id/btn"
+        android:background="#00ff00"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/spinner" />
+
+    <ViewStub
+        android:id="@+id/commute_concern_road_tip_panel_viewstub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rr_empty_top_layout"
+        android:layout_marginTop="10dp"
+        android:inflatedId="@+id/commute_concern_road_tip_panel"
+        android:layout="@layout/nsdk_layout_commute_concern_road_tip_panel" />
+
+    <include
+        android:id="@+id/commute_care_road_bottom_panel"
+        layout="@layout/nsdk_layout_commute_concern_road_bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#330000"></include>
+
+    <RelativeLayout
+        android:id="@+id/commute_center_widget_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/commute_care_road_bottom_panel"
+        android:layout_below="@id/rr_empty_top_layout">
+        <!-- 定位 -->
+        <RelativeLayout
+            android:id="@+id/commute_location"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nsdk_light_navi_btn_bg_common_selector"
+            android:clickable="true"
+            android:gravity="center"
+            tools:layout_marginBottom="0dp"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/location_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/nsdk_light_navi_location" />
+        </RelativeLayout>
+        <!-- 比例尺 -->
+        <FrameLayout
+            android:id="@+id/commute_level_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@id/commute_location" />
+    </RelativeLayout>
+</RelativeLayout>

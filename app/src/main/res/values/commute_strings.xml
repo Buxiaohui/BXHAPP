@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="nsdk_commute_setting_title" translatable="false">通勤导航设置</string>
+    <string name="nsdk_commute_setting_sound_title" translatable="false">导航中播报声音</string>
+    <string name="nsdk_commute_setting_sound_sub_title" translatable="false">通勤导航中语音播报路况信息</string>
+    <string name="nsdk_commute_setting_turn_sound_title" translatable="false">转向播报</string>
+    <string name="nsdk_commute_setting_turn_sound_sub_title" translatable="false">临近路口时播报转向提醒</string>
+    <string name="nsdk_commute_setting_ele_eye_sound_title" translatable="false">电子眼播报</string>
+    <string name="nsdk_commute_setting_ele_eye_sound_sub_title" translatable="false">临近电子眼时播报提醒</string>
+    <string name="nsdk_commute_setting_road_title" translatable="false">关注道路</string>
+    <string name="nsdk_commute_setting_road_sub_title" translatable="false">优先提示这些道路的情况</string>
+    <string name="nsdk_commute_setting_help_title" translatable="false">帮助与反馈</string>
+    <string name="nsdk_commute_setting_help_sub_title" translatable="false">有什么想吐槽的尽管说</string>
+    <string name="nsdk_commute_notify_gps_weak">GPS信号弱，请谨慎驾驶</string>
+
+    <string name="nsdk_commute_guide_persist_check_ele_eye" translatable="false">持续为您探测前方电子眼</string>
+
+    <string name="nsdk_commute_guide_exit_navi_tick" formatted="false"> 退出导航(<xliff:g id="exit_commute_navi">%1$d</xliff:g>) </string>
+    <string name="nsdk_commute_route_plan_fail_retry_ing">路线规划失败，正在为您重新算路</string>
+    <string name="nsdk_commute_countdown_timer_exit_navi">倒计时结束后退出导航</string>
+    <string name="nsdk_commute_exit_navi">退出导航</string>
+    <string name="nsdk_commute_cancel">取消</string>
+    <string name="nsdk_commute_switch">切换</string>
+    <string name="nsdk_commute_route_plan_fail_main_tip">路线规划失败，请稍后重试</string>
+    <string name="nsdk_commute_route_plan_fail_sub_tip">请检查网络或重新算路</string>
+    <string name="nsdk_commute_reroute_plan" translatable="false">重新算路</string>
+    <string name="nsdk_commute_guide_route_tab_item_reroute_plan" translatable="false">正在算路，请稍后</string>
+    <string name="nsdk_commute_guide_re_cal_ing" translatable="false">正在重算路中</string>
+    <string name="nsdk_commute_guide_user_cause_re_cal_start" translatable="false">删除途经点，计算路线中</string>
+    <string name="nsdk_commute_guide_user_cause_re_cal_success" translatable="false">已成功删除途经点</string>
+    <string name="nsdk_commute_guide_user_cause_re_cal_fail" translatable="false">删除途经点失败，请稍后重试</string>
+    <string name="nsdk_commute_care_road_ignore_setting" translatable="false">暂不设置</string>
+    <string name="nsdk_commute_care_road_setting_now" translatable="false">立即设置</string>
+    <string name="nsdk_commute_care_toad_setting_tip_sub_title" translatable="false">您也可以在通勤导航中设置或更改</string>
+    <string name="nsdk_commute_care_toad_setting_tip_main_title" translatable="false">设置关注路线，优先推荐并帮您及时了解路况变化</string>
+    <string name="nsdk_commute_care_road_go_home" translatable="false">回家</string>
+    <string name="nsdk_commute_care_road_go_to_company" translatable="false">去公司</string>
+    <string name="nsdk_commute_concern_road_title" translatable="false">关注路线</string>
+    <string name="nsdk_commute_concern_road_tip_0" translatable="false">设置关注路线有什么用？</string>
+    <string name="nsdk_commute_concern_road_tip_1" translatable="false">小度会优先使用这些路线进行导航，实时播报路况</string>
+    <string name="nsdk_commute_concern_road_tip_2" translatable="false">如果没有选出合适的路线，小度也会根据你的习惯智能推荐</string>
+
+</resources>

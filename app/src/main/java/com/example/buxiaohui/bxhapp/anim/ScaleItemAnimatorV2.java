@@ -3,7 +3,7 @@ package com.example.buxiaohui.bxhapp.anim;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v7.widget.RecyclerView;
-
+import bnav.baidu.com.sublog.LogUtil;
 /**
  * Created by ivy on 2017/3/22.
  * Description：

@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final LayoutInflater mLayoutInflater;
-    private List<HistogramAdapter.ItemData> mDatas;
+    private List<ItemData> mDatas;
     private float mHighStandard;
     private Context mContext;
     private int indexSelected = -1;
     private SizeHolder sizeHolder;
 
-    public HistogramTimeAdapter(Context context, float highStandard, List<HistogramAdapter.ItemData> mDatas) {
+    public HistogramTimeAdapter(Context context, float highStandard, List<ItemData> mDatas) {
         mLayoutInflater = LayoutInflater.from(context);
         mContext = context;
         mHighStandard = highStandard;
@@ -42,7 +42,7 @@ public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        final HistogramAdapter.ItemData data = mDatas.get(position);
+        final ItemData data = mDatas.get(position);
         TextView timeTv = ((ViewHolder) holder).getView(R.id.time_tx);
         TextView indexTv = ((ViewHolder) holder).getView(R.id.index);
         timeTv.setTag(position);

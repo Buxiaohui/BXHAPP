@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':sublibrary', ':sublog'
 
 // MyApp/settings.gradle
 setBinding(new Binding([gradle: this]))                                 // new

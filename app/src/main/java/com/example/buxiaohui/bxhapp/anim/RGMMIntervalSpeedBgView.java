@@ -3,7 +3,6 @@
  */
 package com.example.buxiaohui.bxhapp.anim;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
 import com.example.buxiaohui.bxhapp.R;
 
 import android.content.Context;
@@ -16,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
-
+import bnav.baidu.com.sublog.LogUtil;
 /**
  * Created by buxiaohui on 2018/8/22.
  */

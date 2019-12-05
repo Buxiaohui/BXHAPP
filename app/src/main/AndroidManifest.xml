@@ -3,6 +3,7 @@
           package="com.example.buxiaohui.bxhapp">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <application
             android:allowBackup="true"
@@ -32,6 +33,19 @@
         <activity android:name=".flutter.FlutterSecondActivity"></activity>
         <activity android:name=".flutter.Flutter2NaActivity"></activity>
         <activity android:name=".histogram.HistogramActivity"></activity>
+        <activity android:name=".histogram.HistogramActivityV2"></activity>
+        <activity android:name=".opencv.OpenCvActivity"></activity>
+        <activity android:name=".commute.BNCommuteStateActivity"></activity>
+        <activity android:name=".commute.BNCommuteNotifyActivity"></activity>
+        <activity android:name=".commute.BNSpeedActivity"></activity>
+        <activity android:name=".commute.BNCommuteUILabelsActivity"></activity>
+        <activity android:name=".commute.BNCommuteTabsActivity"></activity>
+        <activity android:name=".commute.BNCommuteGuidePanelActivity"></activity>
+        <activity android:name="WebpTestActivity"></activity>
+        <activity android:name=".FickerActivity"></activity>
+        <activity android:name=".careroad.CenterRecyclerviewActivity"></activity>
+        <activity android:name=".TestImageLocationActivity"></activity>
+        <activity android:name=".touch.TouchActivity"></activity>
     </application>
 
 </manifest>

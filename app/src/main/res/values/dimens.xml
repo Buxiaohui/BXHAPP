@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="nsdk_28">28dp</dimen>
     <dimen name="nsdk_61">61dp</dimen>
     <dimen name="nsdk_66">66dp</dimen>
     <dimen name="nsdk_76">76dp</dimen>
+    <dimen name="nsdk_100">100dp</dimen>
     <dimen name="nsdk_142">142dp</dimen>
     <dimen name="nsdk_208">208dp</dimen>
     <dimen name="nsdk_132">132dp</dimen>

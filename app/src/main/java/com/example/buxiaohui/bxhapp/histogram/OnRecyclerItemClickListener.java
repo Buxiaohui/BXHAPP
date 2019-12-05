@@ -1,13 +1,11 @@
 package com.example.buxiaohui.bxhapp.histogram;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
-
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-
+import bnav.baidu.com.sublog.LogUtil;
 public abstract class OnRecyclerItemClickListener implements RecyclerView.OnItemTouchListener {
     private GestureDetectorCompat gestureDetector;
     private RecyclerView recyclerView;

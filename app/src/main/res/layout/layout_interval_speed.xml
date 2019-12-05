@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.RelativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--场景类-->
+    <RelativeLayout
+        android:id="@+id/scene_notify_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="gone">
+        <!--GPS弱-->
+        <TextView
+            android:id="@+id/scene_notify_gps_week_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/nsdk_commute_notify_gps_week"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+
+    <!--诱导类-->
+    <RelativeLayout
+        android:id="@+id/guide_notify_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/guide_notify_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            tools:background="#00ff00" />
+
+        <TextView
+            android:id="@+id/guide_notify_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            tools:text="@string/nsdk_commute_notify_gps_week" />
+    </RelativeLayout>
+
+</merge>

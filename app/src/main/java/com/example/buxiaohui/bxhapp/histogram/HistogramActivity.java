@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
 import com.example.buxiaohui.bxhapp.R;
 import com.example.buxiaohui.bxhapp.ScreenUtils;
 import com.example.buxiaohui.bxhapp.UIUtils;
@@ -33,7 +32,7 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import bnav.baidu.com.sublog.LogUtil;
 public class HistogramActivity extends Activity {
     private static final String TAG = "HistogramActivity";
     final RecyclerView.OnScrollListener[] scrollListeners = new RecyclerView.OnScrollListener[2];
@@ -58,14 +57,7 @@ public class HistogramActivity extends Activity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             mRunningGuideScroll = true;
-                        mHistogramView.smoothScrollBy(200,0);
-//                        mHistogramView.smoothScrollBy(-180,0);
-//                        mHistogramView.smoothScrollToPosition(80);
-//                        mHistogramView.smoothScrollToPosition(7);
-            //            Instrumentation inst = new Instrumentation();
-            //            long dowTime = SystemClock.uptimeMillis();
-            //            inst.sendPointerSync(MotionEvent.obtain(dowTime,dowTime,
-            //                    MotionEvent.ACTION_DOWN, mHistogramView.getX(), mHistogramView.getY(),0));
+            mHistogramView.smoothScrollBy(200, 0);
 
             Thread thread = new Thread() {
                 @Override
@@ -98,7 +90,7 @@ public class HistogramActivity extends Activity {
     };
     private MyLinearLayoutManager mLinearLayoutManager;
     private View mHistogrsmMidLineView;
-    private List<HistogramAdapter.ItemData> mDatas;
+    private List<ItemData> mDatas;
     private SizeHolder mSizeHolder;
     private boolean mHistogramViewGraged;
     private float mFirstMoveX = 0f;
@@ -150,10 +142,10 @@ public class HistogramActivity extends Activity {
         mTimeHistogramViewOffsetTv = findViewById(R.id.offset_1);
         mHistogrsmMidLineView = findViewById(R.id.mid_line);
         scale = (1.0d * mSizeHolder.getItemSelectWidthPx()) / (1.0d * mSizeHolder.getItemWidthPx());
-        HistogramAdapter.ItemData itemData = null;
+        ItemData itemData = null;
         mDatas = new ArrayList<>();
         for (int i = 0; i < 102; i++) {
-            itemData = new HistogramAdapter.ItemData("" + i, new Random().nextInt(99));
+            itemData = new ItemData("" + i, new Random().nextInt(99));
             mDatas.add(itemData);
         }
         mLinearLayoutManager = new MyLinearLayoutManager(this);
@@ -162,7 +154,7 @@ public class HistogramActivity extends Activity {
         mHistogramView.setLayoutManager(mLinearLayoutManager);
         adapter = new HistogramAdapter(this, 70, mDatas);
         adapter.setSizeHolder(mSizeHolder);
-        mHistogramView.setItemAnimator(new ScaleItemAnimator());
+        // mHistogramView.setItemAnimator(new ScaleItemAnimator());
         mHistogramView.setAdapter(adapter);
 
         mTimeHistogramView = findViewById(R.id.histogram_select);
@@ -183,8 +175,8 @@ public class HistogramActivity extends Activity {
         //            }
         //        });
         mTimeHistogramView.setAdapter(adapterSelect);
-        mTimeHistogramView.setRect(true);
-        //mTimeHistogramView.setRect(false);
+//        mTimeHistogramView.setRect(true);
+        mTimeHistogramView.setRect(false);
 
         initHistogramViewTouchListener();
         mHistogramView.setOnTouchListener(new View.OnTouchListener() {
@@ -302,7 +294,7 @@ public class HistogramActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-//        scrollGuide();
+        //        scrollGuide();
     }
 
     @Override
@@ -510,9 +502,9 @@ public class HistogramActivity extends Activity {
         if (newState == SCROLL_STATE_IDLE) {
             if (mRunningGuideScroll) {
                 mRunningGuideScroll = false;
-               //  mHistogramView.smoothScrollBy(-200, 0);
-               // mHistogramView.smoothScrollToPosition(0);
-                mLinearLayoutManager. scrollToPositionWithOffset(4,0);
+                //  mHistogramView.smoothScrollBy(-200, 0);
+                 mHistogramView.smoothScrollToPosition(1);
+                // mLinearLayoutManager. scrollToPositionWithOffset(4,0);
                 mLinearLayoutManager.setGuideMode(false);
                 return;
             }
@@ -631,7 +623,7 @@ public class HistogramActivity extends Activity {
                 mDatas.get(i).setItemState(FutureTripParams.ItemState.UN_SELECT);
             }
         }
-        adapter.notifyItemRangeChanged(0,adapter.getItemCount());
+        adapter.notifyItemRangeChanged(0, adapter.getItemCount());
         // adapter.notifyDataSetChanged();
         // adapter.notifyDataSetChanged();
     }
@@ -844,11 +836,13 @@ public class HistogramActivity extends Activity {
                 mLinearLayoutManager.setGuideMode(true);
                 mLinearLayoutManager.setTimeRatio(50);
                 mRunningGuideScroll = true;
-               //  mHistogramView.smoothScrollBy(900,0);
+                //  mHistogramView.smoothScrollBy(900,0);
                 //mLinearLayoutManager.smoothScrollToPosition(mHistogramView, RecyclerView.State,4);
                 mHistogramView.smoothScrollToPosition(7);
+                // mHistogramView.scrollToPosition(9);
+//                mLinearLayoutManager.scrollToPositionWithOffset(7,0);
             }
-        },500);
+        }, 500);
     }
 
     public void click() {

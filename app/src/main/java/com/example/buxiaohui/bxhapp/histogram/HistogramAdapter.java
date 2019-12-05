@@ -11,7 +11,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -26,9 +25,6 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private ItemClickListener itemClickListener;
     private SizeHolder sizeHolder;
 
-    public void setSizeHolder(SizeHolder sizeHolder) {
-        this.sizeHolder = sizeHolder;
-    }
     public HistogramAdapter(Context context, float highStandard, List<ItemData> mDatas) {
         mLayoutInflater = LayoutInflater.from(context);
         mContext = context;
@@ -36,7 +32,8 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         this.mDatas = mDatas;
     }
 
-    public static void resetItemsAppearance(int index, int itemState, TextView timeTv, TextView durationTv,
+    public static void resetItemsAppearance(int index, int itemState, TextView timeTv,
+                                            TextView durationTv,
                                             TextView tagTv) {
         int drawableId;
         int timeTextSize;
@@ -51,7 +48,8 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 timeTextSize = 17;
                 timeTextColor = Color.parseColor("#999999");
 
-                drawableId = R.drawable.nsdk_drawable_future_trip_main_panel_item_tangle_empty_shape;
+                drawableId =
+                        R.drawable.nsdk_drawable_future_trip_main_panel_item_tangle_empty_shape;
                 break;
             case FutureTripParams.ItemState.SELECT:
                 durationTextSize = 17;
@@ -69,7 +67,8 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 timeTextSize = 17;
                 timeTextColor = Color.parseColor("#999999");
 
-                drawableId = R.drawable.nsdk_drawable_future_trip_main_panel_item_tangle_unselect_shape;
+                drawableId =
+                        R.drawable.nsdk_drawable_future_trip_main_panel_item_tangle_unselect_shape;
                 break;
             default:
                 durationTextSize = 14;
@@ -78,7 +77,8 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 timeTextSize = 17;
                 timeTextColor = Color.parseColor("#999999");
 
-                drawableId = R.drawable.nsdk_drawable_future_trip_main_panel_item_tangle_empty_shape;
+                drawableId =
+                        R.drawable.nsdk_drawable_future_trip_main_panel_item_tangle_empty_shape;
                 break;
 
         }
@@ -92,7 +92,7 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     }
 
-    public static Drawable getTagBgDrawable(Context ctx,int itemState) {
+    public static Drawable getTagBgDrawable(Context ctx, int itemState) {
         int id = -1;
         switch (itemState) {
             case FutureTripParams.ItemState.EMPTY:
@@ -111,10 +111,16 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         return ctx.getResources().getDrawable(id);
     }
 
+    public void setSizeHolder(SizeHolder sizeHolder) {
+        this.sizeHolder = sizeHolder;
+    }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ViewHolder holder = new ViewHolder(
-                mLayoutInflater.inflate(R.layout.nsdk_layout_future_trip_main_panel_time_item, parent, false));
+                mLayoutInflater
+                        .inflate(R.layout.nsdk_layout_future_trip_main_panel_time_item, parent,
+                                false));
         return holder;
     }
 
@@ -134,27 +140,28 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         resizeItem(timeTv.getContext(), durationTv, tagTv, timeTv, data);
         tagTv.setVisibility(View.VISIBLE);
         tagTv.setTag(position);
-        ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) holder.itemView.getLayoutParams();
+        ViewGroup.LayoutParams layoutParams =
+                (ViewGroup.LayoutParams) holder.itemView.getLayoutParams();
         if (data.getItemState() == FutureTripParams.ItemState.SELECT) {
             layoutParams.width = sizeHolder.getItemSelectWidthPx();
             //            timeTv.setText("" + position+" 出发");
         } else {
-            layoutParams.width =sizeHolder.getItemWidthPx();
+            layoutParams.width = sizeHolder.getItemWidthPx();
             //            timeTv.setText("" + position);
         }
-//        layoutParams.width = data.width;
+        //        layoutParams.width = data.width;
         timeTv.setText("" + position);
         timeTv.setTag(position);
         durationTv.setText("haha");
-//        holder.itemView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (itemClickListener != null) {
-//                    return itemClickListener.isScrolling();
-//                }
-//                return false;
-//            }
-//        });
+        //        holder.itemView.setOnTouchListener(new View.OnTouchListener() {
+        //            @Override
+        //            public boolean onTouch(View v, MotionEvent event) {
+        //                if (itemClickListener != null) {
+        //                    return itemClickListener.isScrolling();
+        //                }
+        //                return false;
+        //            }
+        //        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -169,7 +176,8 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         this.itemClickListener = itemClickListener;
     }
 
-    private void resizeItem(Context context, TextView dutationTv, TextView tagTv, TextView timeTv, ItemData data) {
+    private void resizeItem(Context context, TextView dutationTv, TextView tagTv, TextView timeTv,
+                            ItemData data) {
         if (context == null) {
             return;
 
@@ -179,15 +187,20 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         /*if (data.getItemState() == FutureTripParams.ItemState.EMPTY) {
             lp.height = UIUtils.dip2px(context, 10);
             //            textView.setBackgroundDrawable(context.getResources().getDrawable(R
-            //                    .drawable.nsdk_drawable_future_trip_main_panel_item_tangle_empty_shape));
+            //                    .drawable
+            .nsdk_drawable_future_trip_main_panel_item_tangle_empty_shape));
         } else {
             lp.height = (int) (UIUtils.dip2px(context, 150) * (data.getProgress() / 100.0f));
             if (data.getItemState() == FutureTripParams.ItemState.SELECT) {
-                //                textView.setBackgroundDrawable(context.getResources().getDrawable(R
-                //                        .drawable.nsdk_drawable_future_trip_main_panel_item_tangle_shape));
+                //                textView.setBackgroundDrawable(context.getResources()
+                .getDrawable(R
+                //                        .drawable
+                .nsdk_drawable_future_trip_main_panel_item_tangle_shape));
             } else {
-                //                textView.setBackgroundDrawable(context.getResources().getDrawable(R
-                //                        .drawable.nsdk_drawable_future_trip_main_panel_item_tangle_unselect_shape));
+                //                textView.setBackgroundDrawable(context.getResources()
+                .getDrawable(R
+                //                        .drawable
+                .nsdk_drawable_future_trip_main_panel_item_tangle_unselect_shape));
             }
 
         }*/
@@ -214,62 +227,6 @@ public class HistogramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             indexSelected = position;
             notifyItemChanged(indexSelected);
             notifyItemChanged(a);
-        }
-    }
-
-    public static class ItemData {
-        private String name;
-        private boolean select;
-        private int itemState;
-        private float progress;
-        private int width;
-
-        public int getWidth() {
-            return width;
-        }
-
-        public void setWidth(int width) {
-            this.width = width;
-        }
-
-        public ItemData(String name) {
-            this.name = name;
-        }
-        public ItemData(String name, float progress) {
-            this.name = name;
-            this.progress = progress;
-        }
-
-        public int getItemState() {
-            return itemState;
-        }
-
-        public void setItemState(int itemState) {
-            this.itemState = itemState;
-        }
-
-        public boolean isSelect() {
-            return select;
-        }
-
-        public void setSelect(boolean select) {
-            this.select = select;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public float getProgress() {
-            return progress;
-        }
-
-        public void setProgress(float progress) {
-            this.progress = progress;
         }
     }
 

@@ -3,7 +3,6 @@
  */
 package com.example.buxiaohui.bxhapp.anim;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
 import com.example.buxiaohui.bxhapp.R;
 
 import android.animation.Animator;
@@ -15,7 +14,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
-
+import bnav.baidu.com.sublog.LogUtil;
 /**
  * Created by buxiaohui on 2018/8/21.
  */

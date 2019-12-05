@@ -74,10 +74,16 @@ public class TestOpenApiActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(editText.getText())) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     // intent.setData(Uri.parse(editText.getText().toString()));
-                    Uri uri = Uri.parse(editText.getText().toString());
+                    String uriStr = editText.getText().toString();
+                    System.out.println("buxiaohui_openapi_0:" + uriStr);
+                    if (uriStr.contains("src=good_luck")) {
+                        uriStr = uriStr.replace("src=good_luck", "src=good_luck&time_stamp=" + System.currentTimeMillis());
+                    }
+                    System.out.println("buxiaohui_openapi_1:" + uriStr);
+                    Uri uri = Uri.parse(uriStr);
                     intent.setData(uri);
                     System.out.println(uri);
-                    System.out.println("buxiaohui:" + uri);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 } else {
                     Toast.makeText(v.getContext(), "error", Toast.LENGTH_SHORT).show();

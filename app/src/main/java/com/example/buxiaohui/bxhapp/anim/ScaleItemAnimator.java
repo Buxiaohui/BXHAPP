@@ -1,6 +1,5 @@
 package com.example.buxiaohui.bxhapp.anim;
 
-import com.example.buxiaohui.bxhapp.LogUtil;
 import com.example.buxiaohui.bxhapp.R;
 import com.example.buxiaohui.bxhapp.histogram.HistogramAdapter;
 
@@ -11,7 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import bnav.baidu.com.sublog.LogUtil;
 /**
  * Created by ivy on 2017/3/22.
  * Description：

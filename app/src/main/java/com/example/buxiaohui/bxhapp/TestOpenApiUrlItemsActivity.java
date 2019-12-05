@@ -12,21 +12,15 @@ import java.util.Map;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 public class TestOpenApiUrlItemsActivity extends AppCompatActivity {
     String curUrl;
@@ -59,7 +53,7 @@ public class TestOpenApiUrlItemsActivity extends AppCompatActivity {
                         HashMap<String, String> map = new HashMap<>();
                         map.put("content", itemStrs[1]);
                         map.put("desc", itemStrs[0]);
-                        map.put("index",i+"");
+                        map.put("index", i + "");
                         list.add(map);
                     }
                     Log.e("buxiaohui", "contentStr:" + contentStr);
@@ -100,15 +94,17 @@ public class TestOpenApiUrlItemsActivity extends AppCompatActivity {
     }
 
     private void initListView() {
-        String[] from = {"index","desc","content"};
+        String[] from = {"index", "desc", "content"};
         // 列表项组件Id 数组
-        int[] to = {R.id.index,R.id.desc,R.id.text};
+        int[] to = {R.id.index, R.id.desc, R.id.text};
         final ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(new SimpleAdapter(this, list, R.layout.item_open_api_urls, from, to));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent();
+                String originUrl = list.get(position).get("content");
+                originUrl = originUrl + "&time_stamp=" + System.currentTimeMillis();
                 intent.putExtra("url", list.get(position).get("content"));
                 intent.putExtra("desc", list.get(position).get("desc"));
                 setResult(10086, intent);
