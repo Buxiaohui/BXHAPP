@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MyHistogramBottomHighLightViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final LayoutInflater mLayoutInflater;
     private List<ItemData> mDatas;
     private float mHighStandard;
@@ -19,7 +19,7 @@ public class HistogramTimeAdapter extends RecyclerView.Adapter<RecyclerView.View
     private int indexSelected = -1;
     private SizeHolder sizeHolder;
 
-    public HistogramTimeAdapter(Context context, float highStandard, List<ItemData> mDatas) {
+    public MyHistogramBottomHighLightViewAdapter(Context context, float highStandard, List<ItemData> mDatas) {
         mLayoutInflater = LayoutInflater.from(context);
         mContext = context;
         mHighStandard = highStandard;

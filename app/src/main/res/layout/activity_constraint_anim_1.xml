@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnav_rg_road_name_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bnav_rg_route_name_bg"
+    android:minHeight="42dp">
+
+    <TextView
+        android:id="@+id/bnav_rg_road_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:maxWidth="@dimen/nsdk_rg_cur_road_name_width"
+        android:singleLine="true"
+        android:text="当前路名"
+        android:textColor="#222222"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/bnav_rg_vdr_location_tips_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nsdk_rg_control_panel_btn_height"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/bnav_rg_open_vdr_location_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:text="启用Baidu智能定位"
+            android:textColor="#333333"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

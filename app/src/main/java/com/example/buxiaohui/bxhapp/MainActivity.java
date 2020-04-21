@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        testDrawableBitmap1();
         //        testDrawableBitmap();
         //        testDrawableBitmapV2();
         //        testHtmlText();
@@ -162,6 +163,22 @@ public class MainActivity extends AppCompatActivity {
     public void testDrawableBitmap() {
         RouteCarNearbySearchPopup routeNearbySearchPopup = new RouteCarNearbySearchPopup(this);
         routeNearbySearchPopup.setPoiName("西北");
+        routeNearbySearchPopup.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        routeNearbySearchPopup
+                .layout(0, 0, routeNearbySearchPopup.getMeasuredWidth(), routeNearbySearchPopup.getMeasuredHeight());
+        routeNearbySearchPopup.setDrawingCacheEnabled(true);
+        routeNearbySearchPopup.buildDrawingCache();
+        Bitmap bitmap = routeNearbySearchPopup.getDrawingCache();
+        if (bitmap != null) {
+            Drawable drawable = new BitmapDrawable(bitmap);
+            findViewById(R.id.layout).setBackgroundDrawable(drawable);
+        }
+
+        ((RelativeLayout) findViewById(R.id.container_pop)).addView(routeNearbySearchPopup);
+    }
+    public void testDrawableBitmap1() {
+        CarPassRoadView routeNearbySearchPopup = new CarPassRoadView(this);
         routeNearbySearchPopup.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
         routeNearbySearchPopup

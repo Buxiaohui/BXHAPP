@@ -14,13 +14,20 @@ import com.example.buxiaohui.bxhapp.commute.BNCommuteStateActivity;
 import com.example.buxiaohui.bxhapp.commute.BNCommuteTabsActivity;
 import com.example.buxiaohui.bxhapp.commute.BNCommuteUILabelsActivity;
 import com.example.buxiaohui.bxhapp.commute.BNSpeedActivity;
+import com.example.buxiaohui.bxhapp.constrantlayoutanim.ContrainLayoutAnimActivity;
 import com.example.buxiaohui.bxhapp.flutter.Flutter2NaActivity;
 import com.example.buxiaohui.bxhapp.flutter.FlutterTestAddViewActivity;
+import com.example.buxiaohui.bxhapp.forkjoin.ForkJoinTestActivity;
 import com.example.buxiaohui.bxhapp.histogram.HistogramActivity;
 import com.example.buxiaohui.bxhapp.histogram.HistogramActivityV2;
 import com.example.buxiaohui.bxhapp.histogram.TimePickerActivity;
+import com.example.buxiaohui.bxhapp.numberpicker.NumberPickerTestActivity;
 import com.example.buxiaohui.bxhapp.opencv.OpenCvActivity;
+import com.example.buxiaohui.bxhapp.pic.PicActivity;
+import com.example.buxiaohui.bxhapp.scrollview.ScrollviewActivity;
+import com.example.buxiaohui.bxhapp.text.SpannableStringActivity;
 import com.example.buxiaohui.bxhapp.touch.TouchActivity;
+import com.example.buxiaohui.bxhapp.viewpager.ViewPagerTestActivity;
 
 import android.arch.lifecycle.ViewModelStore;
 import android.content.Intent;
@@ -60,6 +67,15 @@ public class DispenseActivity extends AppCompatActivity {
     }
 
     private void initListViewList() {
+        dataList.add(new DispenseActivityMode("VDR动画", ContrainLayoutAnimActivity.class));
+        dataList.add(new DispenseActivityMode("滑动测试", ScrollviewActivity.class));
+        dataList.add(new DispenseActivityMode("测试textview", TextViewActivity.class));
+        dataList.add(new DispenseActivityMode("手势晃动动画", HandShakeActivity.class));
+        dataList.add(new DispenseActivityMode("SpannableStringActivity", SpannableStringActivity.class));
+        dataList.add(new DispenseActivityMode("NumberPicker", NumberPickerTestActivity.class));
+        dataList.add(new DispenseActivityMode("ViewPager", ViewPagerTestActivity.class));
+        dataList.add(new DispenseActivityMode("图片测试", PicActivity.class));
+        dataList.add(new DispenseActivityMode("ForkJoin", ForkJoinTestActivity.class));
         dataList.add(new DispenseActivityMode("横向RV", CenterRecyclerviewActivity.class));
         dataList.add(new DispenseActivityMode("测试箭头", FickerActivity.class));
         dataList.add(new DispenseActivityMode("主Activity", MainActivity.class));

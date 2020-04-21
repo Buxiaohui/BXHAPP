@@ -2,8 +2,11 @@ package com.example.buxiaohui.bxhapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Paint;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
+import android.widget.TextView;
+import bnav.baidu.com.sublog.LogUtil;
 
 public class UIUtils {
     /**
@@ -67,5 +70,40 @@ public class UIUtils {
         screenSize[0] = width;
         screenSize[1] = heigh;
         return screenSize;
+    }
+
+    /**
+     * @param view
+     *         展示文本的View
+     * @param maxWidth
+     *         view的最大宽度
+     * @param text
+     *         要展示的文本
+     *
+     * @return
+     */
+    public static int getFeedLinePosition(TextView view, int maxWidth, String text,int textSizePX) {
+        Paint paint = view.getPaint();
+        paint.setTextSize(textSizePX);
+        if (maxWidth >= paint.measureText(text)) {
+            LogUtil.e("getFeedLinePosition", "getFeedLinePosition，一行放得下");
+            LogUtil.e("getFeedLinePosition", "text:"+text);
+            LogUtil.e("getFeedLinePosition", "maxWidth:"+maxWidth+"&"+view.getPaint().measureText(text));
+            LogUtil.e("getFeedLinePosition", "maxWidth:"+maxWidth+"&"+paint.measureText(text));
+            return -1;
+        } else {
+            for (int i = text.length(); i >= 0; i--) {
+                String subStr = text.substring(0, i);
+                if (maxWidth < view.getPaint().measureText(subStr)) {
+                    LogUtil.e("getFeedLinePosition", "getFeedLinePosition,continue-subStr:" + subStr);
+                    continue;
+                } else {
+                    LogUtil.e("getFeedLinePosition", "getFeedLinePosition,return subStr:" + subStr + ",i:" + i);
+                    return i;
+                }
+            }
+        }
+        LogUtil.e("getFeedLinePosition", "getFeedLinePosition，final return");
+        return -1;
     }
 }

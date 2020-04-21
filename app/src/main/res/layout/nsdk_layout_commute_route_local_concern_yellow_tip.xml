@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commute_route_tab_concern_road_tip_ourter_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bnav_drawable_commute_route_yellow_white_bg">
+
+    <RelativeLayout
+        android:id="@+id/commute_route_tab_concern_road_tip_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/nsdk_drawable_concern_road_tip_icon"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/nsdk_drawable_concern_road_yellow_tip_icon" />
+
+
+        <ImageView
+            android:id="@+id/commute_route_tab_concern_road_tip_close_btn"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/nsdk_drawable_commute_conceran_close" />
+
+        <TextView
+            android:id="@+id/commute_route_tab_concern_road_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/commute_route_tab_concern_road_tip_close_btn"
+            android:layout_toRightOf="@+id/nsdk_drawable_concern_road_tip_icon"
+            android:maxLines="2"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="@string/nsdk_commute_concern_road_yellow_tip"
+            android:textSize="14dp"
+            tools:text="谁特么买小米儿谁特么买小米儿谁特么买小米儿  去设置" />
+    </RelativeLayout>
+</LinearLayout>

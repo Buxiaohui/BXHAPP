@@ -18,6 +18,8 @@ public class ScreenUtils {
     private static float mDensity = 0;
     private static float mScaledDensity = 0;
     private static int mScreenHeight = 0;
+    private static int StatusBarHeightCacheVal = 0;
+    private static int StatusBarHeightFullScreenCacheVal = 0;
 
     public static float getDensity(Context context) {
         if (mDensity == 0) {
@@ -33,19 +35,11 @@ public class ScreenUtils {
         return mScaledDensity;
     }
 
-    public static int dip2px(float dip, Context context) {
+    public static int dip2px(Context context, int dip) {
         return (int) (0.5F + getDensity(context) * dip);
     }
 
-    public static int dip2px(Context context,int dip) {
-        return (int) (0.5F + getDensity(context) * dip);
-    }
-
-    public static int dip2px(Context context,float dip) {
-        return (int) (0.5F + getDensity(context) * dip);
-    }
-
-    public static int px2dip(int px, Context context) {
+    public static int px2dip(Context context, int px) {
         return (int) (0.5F + px / getDensity(context));
     }
 
@@ -73,7 +67,6 @@ public class ScreenUtils {
         return (int) (spValue * getScaledDensity(context) + 0.5f);
     }
 
-
     public static int getScreenWidth(Context context) {
         if (context != null) {
             return context.getResources().getDisplayMetrics().widthPixels;
@@ -94,7 +87,6 @@ public class ScreenUtils {
             mScreenHeight = height;
         }
     }
-
 
     public static int getViewScreenHeight(Context context) {
         if (context == null) {
@@ -129,9 +121,6 @@ public class ScreenUtils {
         return (int) (percent * getWidth(context));
     }
 
-
-    private static int StatusBarHeightCacheVal = 0;
-
     public static int getStatusBarHeight(Context context) {
         if (StatusBarHeightCacheVal != 0) {
             return StatusBarHeightCacheVal;
@@ -151,8 +140,6 @@ public class ScreenUtils {
         return StatusBarHeightCacheVal;
     }
 
-    private static int StatusBarHeightFullScreenCacheVal = 0;
-
     public static int getStatusBarHeightFullScreen(Context context) {
         if (StatusBarHeightFullScreenCacheVal != 0) {
             return StatusBarHeightFullScreenCacheVal;
@@ -164,7 +151,7 @@ public class ScreenUtils {
         if (resourceId > 0) {
             StatusBarHeightFullScreenCacheVal = context.getResources().getDimensionPixelSize(resourceId);
         }
-        return StatusBarHeightFullScreenCacheVal > 0 ? StatusBarHeightFullScreenCacheVal : dip2px(context,25);
+        return StatusBarHeightFullScreenCacheVal > 0 ? StatusBarHeightFullScreenCacheVal : dip2px(context, 25);
     }
 
 }

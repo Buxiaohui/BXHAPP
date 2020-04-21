@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/darker_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="onClick"
+        android:text="切换" />
+
+    <LinearLayout
+        android:id="@+id/road_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/road_bg"
+        android:minHeight="42dp">
+
+
+        <TextView
+            android:id="@+id/bnav_rg_road_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="center"
+            android:maxWidth="@dimen/nsdk_rg_cur_road_name_width"
+            android:singleLine="true"
+            android:text="当前路名"
+            android:textColor="#222222"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vdr_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@drawable/vdr_bg"
+        android:minHeight="42dp">
+
+
+        <RelativeLayout
+            android:id="@+id/bnav_rg_vdr_location_tips_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/nsdk_rg_control_panel_btn_height"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/bnav_rg_open_vdr_location_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:maxLines="1"
+                android:text="启用Baidu智能定位"
+                android:textColor="#333333"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

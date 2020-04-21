@@ -10,7 +10,6 @@ import com.example.buxiaohui.bxhapp.R;
 import com.example.buxiaohui.bxhapp.ScreenUtils;
 import com.example.buxiaohui.bxhapp.UIUtils;
 import com.example.buxiaohui.bxhapp.VibrateHelper;
-import com.example.buxiaohui.bxhapp.anim.ScaleItemAnimator;
 
 import android.Manifest;
 import android.app.Activity;
@@ -33,6 +32,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import bnav.baidu.com.sublog.LogUtil;
+
 public class HistogramActivity extends Activity {
     private static final String TAG = "HistogramActivity";
     final RecyclerView.OnScrollListener[] scrollListeners = new RecyclerView.OnScrollListener[2];
@@ -40,13 +40,14 @@ public class HistogramActivity extends Activity {
     HistogramAdapter adapter;
     HistogramBottomAdapter adapterSelect;
     double scale;
-    LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false) {
+    LinearLayoutManager manager =
+            new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false) {
 
-        @Override
-        public boolean isSmoothScrolling() {
-            return super.isSmoothScrolling();
-        }
-    };
+                @Override
+                public boolean isSmoothScrolling() {
+                    return super.isSmoothScrolling();
+                }
+            };
     boolean enable = true;
     private View mContainer;
     private FutureTripTimeListView mTimeHistogramView;
@@ -123,11 +124,9 @@ public class HistogramActivity extends Activity {
                     mHistogramView.post(new Runnable() {
                         @Override
                         public void run() {
-                            calTimeViewOffsetOnInit(Integer.parseInt(s));
-                            //                            updateDatas(Integer.parseInt(s));
-                            //                            adapter.notifyDataSetChanged();
-                            setSelectedItemCenterHorizontalImmediately(Integer.parseInt(s));
-                            //setSelectedItemCenterHorizontalTimeV2(Integer.parseInt(s), true);
+                            int index = Integer.parseInt(s);
+                            calTimeViewOffsetOnInit(index);
+                            setSelectedItemCenterHorizontalImmediately(index);
                         }
                     });
                 } catch (Exception e) {
@@ -175,7 +174,7 @@ public class HistogramActivity extends Activity {
         //            }
         //        });
         mTimeHistogramView.setAdapter(adapterSelect);
-//        mTimeHistogramView.setRect(true);
+        //        mTimeHistogramView.setRect(true);
         mTimeHistogramView.setRect(false);
 
         initHistogramViewTouchListener();
@@ -234,7 +233,8 @@ public class HistogramActivity extends Activity {
                     } else if (event.getAction() == MotionEvent.ACTION_UP) {
                         float upX = event.getX();
                         int touchSlop = ViewConfiguration.get(v.getContext()).getScaledTouchSlop();
-                        LogUtil.e(TAG, "check_grag_mFirstMoveX:" + mFirstMoveX + ",Math.abs(upX - mFirstMoveX):" + Math
+                        LogUtil.e(TAG, "check_grag_mFirstMoveX:" + mFirstMoveX
+                                + ",Math.abs(upX - mFirstMoveX):" + Math
                                 .abs(upX - mFirstMoveX) + ",touchSlop:" + touchSlop);
                         if (mFirstMoveX > 0f && Math.abs(upX - mFirstMoveX) > touchSlop) {
                             // TODO 统计
@@ -256,7 +256,8 @@ public class HistogramActivity extends Activity {
     private void updateClipRect() {
         int screen = ScreenUtils.getScreenWidth(this);
         int zoneWidth = ScreenUtils.dip2px(this, 65);
-        Rect rect = new Rect(screen / 2 - zoneWidth / 2, 0, screen / 2 + zoneWidth / 2, ScreenUtils.dip2px(this, 33));
+        Rect rect = new Rect(screen / 2 - zoneWidth / 2, 0, screen / 2 + zoneWidth / 2,
+                ScreenUtils.dip2px(this, 33));
         mTimeHistogramView.updateRect(rect);
         mTimeHistogramView.invalidate();
     }
@@ -276,10 +277,12 @@ public class HistogramActivity extends Activity {
 
     private void checkPermission() {
         if (!VibrateHelper.isVibratePermissionEnabled(this)) {
-            //            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.VIBRATE)) {
+            //            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest
+            //            .permission.VIBRATE)) {
             //                // 显示给用户的解释
             //            } else {// No explanation needed, we can request the permission.
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.VIBRATE}, 10086);
+            ActivityCompat
+                    .requestPermissions(this, new String[] {Manifest.permission.VIBRATE}, 10086);
             //            }
         }
 
@@ -370,11 +373,14 @@ public class HistogramActivity extends Activity {
                     mDatas.get(curIndex).setSelect(false);
                     view1.findViewById(R.id.eta_tag_tx).setBackgroundDrawable(
                             HistogramAdapter
-                                    .getTagBgDrawable(recyclerView.getContext(), FutureTripParams.ItemState.EMPTY));
-                } else if (mid > mSizeHolder.getPilllarAnimLeft() && mid < mSizeHolder.getPilllarAnimRight()) {
+                                    .getTagBgDrawable(recyclerView.getContext(),
+                                            FutureTripParams.ItemState.EMPTY));
+                } else if (mid > mSizeHolder.getPilllarAnimLeft() && mid < mSizeHolder
+                        .getPilllarAnimRight()) {
                     view1.findViewById(R.id.eta_tag_tx).setBackgroundDrawable(
                             HistogramAdapter
-                                    .getTagBgDrawable(recyclerView.getContext(), FutureTripParams.ItemState.SELECT));
+                                    .getTagBgDrawable(recyclerView.getContext(),
+                                            FutureTripParams.ItemState.SELECT));
 
                     if (mDatas.get(curIndex).isSelect()) {
                         VibrateHelper.mobileVibration(this);
@@ -389,7 +395,8 @@ public class HistogramActivity extends Activity {
                     mDatas.get(curIndex).setSelect(true);
                     view1.findViewById(R.id.eta_tag_tx).setBackgroundDrawable(
                             HistogramAdapter
-                                    .getTagBgDrawable(recyclerView.getContext(), FutureTripParams.ItemState.UN_SELECT));
+                                    .getTagBgDrawable(recyclerView.getContext(),
+                                            FutureTripParams.ItemState.UN_SELECT));
                 }
 
                 /**从两边滑到中间的过程中，柱逐渐变宽，原来中间的item逐渐变窄到正常宽度*/
@@ -401,10 +408,13 @@ public class HistogramActivity extends Activity {
         double timeDx = Math.round(histogramOff * scale);
         //int p = dx > 0 ? 1 : -1;
         final double flagTimeDx = timeDx;
-        LogUtil.e(TAG, "mTimeHistogramView.smoothScrollBy,histogramOff:" + histogramOff + "mtimeHistogramInitOffset:"
+        LogUtil.e(TAG, "mTimeHistogramView.smoothScrollBy,histogramOff:" + histogramOff
+                + "mtimeHistogramInitOffset:"
                 + timeHistogramInitOffset);
-        LogUtil.e(TAG, "mTimeHistogramView.smoothScrollBy:" + (int) flagTimeDx + ",dx:" + dx + ",timeDx:" + timeDx
-                + ",toTimeDx:" + (timeHistogramInitOffset + (int) flagTimeDx));
+        LogUtil.e(TAG,
+                "mTimeHistogramView.smoothScrollBy:" + (int) flagTimeDx + ",dx:" + dx + ",timeDx:"
+                        + timeDx
+                        + ",toTimeDx:" + (timeHistogramInitOffset + (int) flagTimeDx));
 
         //        handler.removeCallbacksAndMessages(null);
         //        Message message = Message.obtain();
@@ -413,7 +423,8 @@ public class HistogramActivity extends Activity {
 
         int offset = calCulateTimeOffset(mTimeHistogramView, mHistogramViewOffsetTv);
         final int targetOffset = (timeHistogramInitOffset + (int) flagTimeDx);
-        LogUtil.e(TAG, "mTcurrentOffset:" + offset + ",targetOffset:" + (timeHistogramInitOffset + flagTimeDx));
+        LogUtil.e(TAG, "mTcurrentOffset:" + offset + ",targetOffset:" + (timeHistogramInitOffset
+                                                                                 + flagTimeDx));
 
         //        mHistogramView.post(new Runnable() {
         //            @Override
@@ -434,7 +445,8 @@ public class HistogramActivity extends Activity {
         int top = c.getTop();
         int right = c.getRight();
         int result = -left + (firstVisiblePosition) * c.getWidth();
-        LogUtil.e(TAG, "calCulateTimeOffset,result:" + result + ",top:" + top + ",right:" + right + ",left:" + left
+        LogUtil.e(TAG, "calCulateTimeOffset,result:" + result + ",top:" + top + ",right:" + right
+                + ",left:" + left
                 + ",bottom:" + bottom + "，firstVisiblePosition：" + firstVisiblePosition);
         mTimeHistogramViewOffsetTv.setText("" + result);
         return result;
@@ -491,6 +503,8 @@ public class HistogramActivity extends Activity {
                 // timeTv.setText(s);
             }
         }
+        LogUtil.e(TAG,
+                "changeWidthOnScroll,calculate_w,index:" + index + ",layoutParams.width:" + layoutParams.width);
         view.setLayoutParams(layoutParams);
 
     }
@@ -503,7 +517,7 @@ public class HistogramActivity extends Activity {
             if (mRunningGuideScroll) {
                 mRunningGuideScroll = false;
                 //  mHistogramView.smoothScrollBy(-200, 0);
-                 mHistogramView.smoothScrollToPosition(1);
+                mHistogramView.smoothScrollToPosition(1);
                 // mLinearLayoutManager. scrollToPositionWithOffset(4,0);
                 mLinearLayoutManager.setGuideMode(false);
                 return;
@@ -527,13 +541,15 @@ public class HistogramActivity extends Activity {
             LogUtil.e(TAG, "updateOnClickHistogramItem,index:" + index);
         }
 
-        //        Date selectDate = mFutureTripMainPanelPresenter.getData().getDatas().get(index).getDate();
+        //        Date selectDate = mFutureTripMainPanelPresenter.getData().getDatas().get(index)
+        //        .getDate();
         // 如果已经居中了
         if (isCenterHorizontal(index)) {
             // 手动点击的时候再弹出历史ETA独立面板
             if (isUserClicked) {
                 //                mFutureTripMainPanelPresenter
-                //                        .onCenterItemClick(mFutureTripMainPanelPresenter.getData().getDatas().get
+                //                        .onCenterItemClick(mFutureTripMainPanelPresenter
+                //                        .getData().getDatas().get
                 // (index).getDate());
             }
             return;
@@ -650,7 +666,8 @@ public class HistogramActivity extends Activity {
         }
         if (LogUtil.LOGGABLE) {
             LogUtil.e(TAG,
-                    "calTimeViewOffsetOnInit,index:" + index + ",timeHistogramInitOffset:" + timeHistogramInitOffset);
+                    "calTimeViewOffsetOnInit,index:" + index + ",timeHistogramInitOffset:"
+                            + timeHistogramInitOffset);
         }
     }
 
@@ -666,8 +683,10 @@ public class HistogramActivity extends Activity {
         int right = c.getRight();
         int result = -left + (firstVisiblePosition) * c.getWidth();
         if (LogUtil.LOGGABLE) {
-            LogUtil.e(TAG, "calCulateTimeOffset,result:" + result + ",top:" + top + ",right:" + right
-                    + ",left:" + left + ",bottom:" + bottom + "，firstVisiblePosition：" + firstVisiblePosition);
+            LogUtil.e(TAG,
+                    "calCulateTimeOffset,result:" + result + ",top:" + top + ",right:" + right
+                            + ",left:" + left + ",bottom:" + bottom + "，firstVisiblePosition："
+                            + firstVisiblePosition);
         }
         return result;
     }
@@ -737,24 +756,21 @@ public class HistogramActivity extends Activity {
     private void setSelectedItemCenterHorizontalImmediately(int index) {
         int offsetVal = 0;
         int halfScreen = getMidXOfParent();
-        float delta = 1.0f * mSizeHolder.getItemSelectWidthPx() / 2 + 1.0f * mSizeHolder.getItemWidthPx() / 2;
         int midXX = mSizeHolder.getItemWidthPx() / 2;
-        if (halfScreen - midXX >= delta) {
-            offsetVal = (int) (midXX - halfScreen + 1.0f * mSizeHolder.getItemSelectWidthPx() / 2
-                    - 1.0f * mSizeHolder.getItemWidthPx() / 2);
-        } else {
-            offsetVal = (int) ((1.0f * mSizeHolder.getItemWidthPx() * 2) / (mSizeHolder.getItemSelectWidthPx()
-                    + mSizeHolder.getItemWidthPx()) * (midXX - halfScreen));
-        }
-
-        // mLinearLayoutManager.scrollToPositionWithOffset(index,offsetVal);
-        mLinearLayoutManager.scrollToPositionWithOffset(index, 0);
+        offsetVal = (int) (midXX - halfScreen + 1.0f * mSizeHolder.getItemSelectWidthPx() / 2 - 1.0f * mSizeHolder.getItemWidthPx() / 2);
+        LogUtil.e(TAG,"setSelectedItemCenterHorizontalImmediately,index:"+index+",offsetVal:"+offsetVal);
+        mLinearLayoutManager.scrollToPositionWithOffset(index,425);
+        mHistogramView.requestLayout();
+        mHistogramView.invalidate();
+        //        mLinearLayoutManager.scrollToPositionWithOffset(index,284);
+//        mLinearLayoutManager.scrollToPositionWithOffset(index, 0);
     }
 
     private void setSelectedItemCenterHorizontal(int index) {
         int offsetVal = 0;
         int halfScreen = getMidXOfParent();
-        float delta = 1.0f * mSizeHolder.getItemSelectWidthPx() / 2 + 1.0f * mSizeHolder.getItemWidthPx() / 2;
+        float delta = 1.0f * mSizeHolder.getItemSelectWidthPx() / 2
+                + 1.0f * mSizeHolder.getItemWidthPx() / 2;
 
         // TODO updateDatas(index);
         int firstPosition = mLinearLayoutManager.findFirstVisibleItemPosition();
@@ -781,19 +797,23 @@ public class HistogramActivity extends Activity {
                 // nothing
             } else if (midX > halfScreen) {
                 if (midX - halfScreen >= delta) {
-                    offsetVal = (int) (midX - halfScreen - 1.0f * mSizeHolder.getItemSelectWidthPx() / 2
-                            + 1.0f * mSizeHolder.getItemWidthPx() / 2);
+                    offsetVal =
+                            (int) (midX - halfScreen - 1.0f * mSizeHolder.getItemSelectWidthPx() / 2
+                                           + 1.0f * mSizeHolder.getItemWidthPx() / 2);
                 } else {
-                    offsetVal = (int) ((1.0f * mSizeHolder.getItemWidthPx() * 2) / (mSizeHolder.getItemSelectWidthPx()
-                            + mSizeHolder.getItemWidthPx()) * (midX - halfScreen));
+                    offsetVal = (int) ((1.0f * mSizeHolder.getItemWidthPx() * 2) / (
+                            mSizeHolder.getItemSelectWidthPx()
+                                    + mSizeHolder.getItemWidthPx()) * (midX - halfScreen));
                 }
             } else {
                 if (halfScreen - midX >= delta) {
-                    offsetVal = (int) (midX - halfScreen + 1.0f * mSizeHolder.getItemSelectWidthPx() / 2
-                            - 1.0f * mSizeHolder.getItemWidthPx() / 2);
+                    offsetVal =
+                            (int) (midX - halfScreen + 1.0f * mSizeHolder.getItemSelectWidthPx() / 2
+                                           - 1.0f * mSizeHolder.getItemWidthPx() / 2);
                 } else {
-                    offsetVal = (int) ((1.0f * mSizeHolder.getItemWidthPx() * 2) / (mSizeHolder.getItemSelectWidthPx()
-                            + mSizeHolder.getItemWidthPx()) * (midX - halfScreen));
+                    offsetVal = (int) ((1.0f * mSizeHolder.getItemWidthPx() * 2) / (
+                            mSizeHolder.getItemSelectWidthPx()
+                                    + mSizeHolder.getItemWidthPx()) * (midX - halfScreen));
                 }
             }
             //mHistogramView.smoothScrollBy((int) offset2, 0);
@@ -821,12 +841,15 @@ public class HistogramActivity extends Activity {
     }
 
     private void testDrawable() {
-        Drawable leftDrawable = getResources().getDrawable(R.drawable.nsdk_route_result_depart_time);
+        Drawable leftDrawable =
+                getResources().getDrawable(R.drawable.nsdk_route_result_depart_time);
         leftDrawable.setBounds(0, 0, UIUtils.dip2px(this, 16), UIUtils.dip2px(this, 16));
         Drawable rightDrawable =
-                getResources().getDrawable(R.drawable.nsdk_route_result_future_depart_time_arrow_up);
+                getResources()
+                        .getDrawable(R.drawable.nsdk_route_result_future_depart_time_arrow_up);
         rightDrawable.setBounds(0, 0, UIUtils.dip2px(this, 9), UIUtils.dip2px(this, 5));
-        ((TextView) findViewById(R.id.test_drawable)).setCompoundDrawables(leftDrawable, null, rightDrawable, null);
+        ((TextView) findViewById(R.id.test_drawable))
+                .setCompoundDrawables(leftDrawable, null, rightDrawable, null);
     }
 
     private void scrollGuide() {
@@ -840,7 +863,7 @@ public class HistogramActivity extends Activity {
                 //mLinearLayoutManager.smoothScrollToPosition(mHistogramView, RecyclerView.State,4);
                 mHistogramView.smoothScrollToPosition(7);
                 // mHistogramView.scrollToPosition(9);
-//                mLinearLayoutManager.scrollToPositionWithOffset(7,0);
+                //                mLinearLayoutManager.scrollToPositionWithOffset(7,0);
             }
         }, 500);
     }

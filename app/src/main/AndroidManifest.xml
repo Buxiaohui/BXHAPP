@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".histogram.TimePickerActivity"></activity>
+        <activity android:name=".numberpicker.NumberPickerTestActivity"></activity>
         <activity android:name=".anim.AnimActivity"></activity>
         <activity android:name=".TestOpenApiActivity"></activity>
         <activity android:name=".TestOpenApiUrlItemsActivity"></activity>
@@ -46,6 +47,14 @@
         <activity android:name=".careroad.CenterRecyclerviewActivity"></activity>
         <activity android:name=".TestImageLocationActivity"></activity>
         <activity android:name=".touch.TouchActivity"></activity>
+        <activity android:name=".pic.PicActivity"></activity>
+        <activity android:name=".forkjoin.ForkJoinTestActivity"></activity>
+        <activity android:name=".viewpager.ViewPagerTestActivity"></activity>
+        <activity android:name=".text.SpannableStringActivity"></activity>
+        <activity android:name=".HandShakeActivity"></activity>
+        <activity android:name=".scrollview.ScrollviewActivity"></activity>
+        <activity android:name=".TextViewActivity"></activity>
+        <activity android:name=".constrantlayoutanim.ContrainLayoutAnimActivity"></activity>
     </application>
 
 </manifest>

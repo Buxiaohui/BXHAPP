@@ -4,4 +4,6 @@
     <item type="id" name="tag_sec"></item>
     <!-- commute -->
     <string name="nsdk_commute_notify_gps_week">GPS信号弱，请谨慎驾驶</string>
+    <string name="nsdk_commute_concern_road_yellow_tip" translatable="false">设置关注路线，及时了解路线解拥堵变化</string>
+    <string name="nsdk_commute_concern_road_tip_set_now" translatable="false">去设置</string>
 </resources>
